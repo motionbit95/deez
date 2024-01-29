@@ -2,7 +2,10 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: bisque;
+    background-color: white;
+    min-height: 100vh;
+    justify-content: center;
+    min-width: 400px;
 }
 
 .blank {
@@ -17,8 +20,8 @@
 
 .form {
     padding: 40px 80px;
+    max-width: 360px;
     width: 100%;
-    max-width: 480px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,21 +33,44 @@
     font-size: xx-large;
     color: cadetblue;
     font-weight: 800;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 50px 0px;
 }
 
 .label {
+    color: #444444;
     font-size: x-large;
+    font-weight: 600;
+    margin: 0px 0px 50px 0px;
 }
 .buttons {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    margin: 0px 0px 32px 0px;
     width: 100%;
     gap: 10px;
 }
 .login_button {
-    padding: 8px;
-
+    color: #424242;
+    background-color: white;
+    font-family: "intel";
+    font-weight: bold;
+    padding: 8px 20px;
+    border-color: #9c9c9c;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    font-size: small;
+    cursor: pointer;
+    text-align: center;
+}
+.checkbox {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }
 
 .t1 {
@@ -58,4 +84,9 @@
     color: cadetblue;
     font-weight: 500;
     cursor: pointer;
+}
+
+.agree {
+    font-size: smaller;
+    color: #424242;
 }

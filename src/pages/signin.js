@@ -16,13 +16,13 @@ export const SignIn = () => {
         Log in
       </div>
       <div id="buttons" className="buttons">
-        <button className="login_button">구글</button>
-        <button className="login_button">페이스북</button>
-        <button className="login_button">이메일</button>
+        <button className="login_button">Continue with Google</button>
+        <button className="login_button">Continue with Facebook</button>
+        <button className="login_button">Continue with email</button>
       </div>
       <div id="t1" className="t1">
         <div>Don't you have an account?</div>
-        <a className="link" onClick={moveSignup}>
+        <a id="link" className="link" onClick={moveSignup}>
           Sign up
         </a>
       </div>
