@@ -16,16 +16,26 @@ export const SignUp = () => {
         Create an account
       </div>
       <div id="buttons" className="buttons">
-        <div className="login_button">Continue with Google</div>
-        <div className="login_button">Continue with Facebook</div>
-        <div className="login_button">Continue with email</div>
+        <div className="login_button">
+          <img className="icon" src={require("../image/google.png")} />
+          <div className="text">Continue with Google</div>
+        </div>
+        <div className="login_button">
+          <img className="icon" src={require("../image/facebook.png")} />
+          <div className="text">Continue with Facebook</div>
+        </div>
+        <div className="login_button">
+          <img className="icon" src={require("../image/mail.png")} />
+          <div className="text">Continue with email</div>
+        </div>
       </div>
       <div className="checkbox">
-      <input type="checkbox"/>
-      <div id="agree" className="agree">
-        I do not wish to receive news and promotions from Freepik Company by email.
+        <input type="checkbox" />
+        <div id="agree" className="agree">
+          I do not wish to receive news and promotions from DEEZ Company by
+          email.
         </div>
-        </div>
+      </div>
       <div id="t1" className="t1">
         <div>Already have an account?</div>
         <a id="link" className="link" onClick={moveSignin}>

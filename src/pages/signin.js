@@ -16,9 +16,18 @@ export const SignIn = () => {
         Log in
       </div>
       <div id="buttons" className="buttons">
-        <button className="login_button">Continue with Google</button>
-        <button className="login_button">Continue with Facebook</button>
-        <button className="login_button">Continue with email</button>
+        <div className="login_button">
+          <img className="icon" src={require("../image/google.png")} />
+          <div className="text">Continue with Google</div>
+        </div>
+        <div className="login_button">
+          <img className="icon" src={require("../image/facebook.png")} />
+          <div className="text">Continue with Facebook</div>
+        </div>
+        <div className="login_button">
+          <img className="icon" src={require("../image/mail.png")} />
+          <div className="text">Continue with email</div>
+        </div>
       </div>
       <div id="t1" className="t1">
         <div>Don't you have an account?</div>

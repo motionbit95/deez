@@ -8,7 +8,11 @@ export const Layout = () => {
     <div id="layout" className="layout">
       {/** 여백 이미지 */}
       <div id="blank" className="blank">
-        <img alt="여백이미지" src="" width={"100%"} height={"100%"} />
+        <img
+          className="image"
+          alt="여백이미지"
+          src={require("../image/6664969.jpg")}
+        />
       </div>
       {/** 폼 */}
       <div id="form" className="form">
