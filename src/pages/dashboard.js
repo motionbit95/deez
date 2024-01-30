@@ -1,5 +1,7 @@
 import React from "react";
 import "../style/dashboard.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Profile from "./profile";
 
 export const DashBoard = () => {
   return (
@@ -8,7 +10,11 @@ export const DashBoard = () => {
         헤더
       </div>
       <div id="body" className="body">
-        바디
+        <BrowserRouter>
+          <Routes>
+            <Route path="/profile/*" element={<Profile/>}/>
+          </Routes>
+        </BrowserRouter>
       </div>
       <div id="footer" className="footer">
         푸터
