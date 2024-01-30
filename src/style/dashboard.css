@@ -47,7 +47,7 @@
     align-items: center;
 }
 
-.profile_picture {
+.d-profile {
     display: flex;
     width: 100%;
     max-width: 960px;
@@ -62,10 +62,16 @@
     }
 }
 
-.avatar_box {
+.avatar-circle {
+    overflow: hidden;
+    border-radius: 50%
+}
+
+.avatar-box {
     background-color: white;
     width: 25vh;
     height: 10%;
+        border-radius: 4px;
 
     display: flex;
     flex-direction: column;
@@ -79,6 +85,7 @@
 .contents {
     background-color: white;
     border: 1px solid black;
+    border-radius: 4px;
 
     height: 100%;
 
@@ -92,7 +99,7 @@
     padding: 30px;
 }
 
-.connect_social {
+.connect-social {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -100,7 +107,7 @@
     gap: 10px;
 }
 
-.C_facebook{
+.C-facebook{
     display: flex;
     font-size: small;
     background-color: #3b5998;
@@ -111,7 +118,7 @@
     cursor: pointer;
     border-radius: 6px;
 }
-.C_google{
+.C-google{
     display: flex;
     font-size: small;
     background-color: white;
@@ -131,6 +138,8 @@
 
 .d2 {
     font-size: small;
+    display: flex;
+    align-items: center;
 }
 
 .ad {
@@ -141,34 +150,62 @@
     flex-direction: column;
 }
 
-.swicth_c {
+.swicth-c {
     background-color: white;
     border: 1px solid black;
+    border-radius: 4px;
     display: flex;
     justify-content:space-between;
     padding: 15px;
     margin: 0px 0px 10px;
 }
 
-.pf_block {
+.pf-block {
     padding: 30px 0px 0px;
 }
 
-.account_close {
+.account-close {
     background-color: #f5f8f9;
     color: red;
-    width: 25%;
+    width: 100px;
     text-align: center;
     border-radius: 1px;
     font-size:xx-small;
     font-weight: 500;
     cursor: pointer;
-    padding: 4px;
-    margin: 19px;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
 }
 
-.d_button {
+.d-button {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+}
+
+.cancel-button {
+    display: flex;
+    font-size: medium;
+    background-color: white;
+    color: #222222;
+    text-align: center;
+    justify-content: center;
+    padding: 12px;
+    cursor: pointer;
+    border: 2px solid #9c9c9c;
+    border-radius: 5px;
+}
+
+.y-button {
+    display: flex;
+    font-size: medium;
+    background-color: #4c2;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding: 12px;
+    cursor: pointer;
+    border: 2px solid #4c2;
+    border-radius: 5px;
 }

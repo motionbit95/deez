@@ -2,6 +2,7 @@ import React from "react";
 import "../style/dashboard.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./profile";
+import Downloads from "./downloads";
 
 export const DashBoard = () => {
   return (
@@ -13,6 +14,7 @@ export const DashBoard = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/profile/*" element={<Profile/>}/>
+            <Route path="/downloads/*" element={<Downloads/>}/>
           </Routes>
         </BrowserRouter>
       </div>
