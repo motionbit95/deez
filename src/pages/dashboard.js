@@ -3,18 +3,17 @@ import "../style/dashboard.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./profile";
 import Downloads from "./downloads";
+import BHeader from "../component/BHeader";
 
 export const DashBoard = () => {
   return (
     <div id="container" className="container">
-      <div id="header" className="header">
-        헤더
-      </div>
+      <BHeader />
       <div id="body" className="body">
         <BrowserRouter>
           <Routes>
-            <Route path="/profile/*" element={<Profile/>}/>
-            <Route path="/downloads/*" element={<Downloads/>}/>
+            <Route path="/profile/*" element={<Profile />} />
+            <Route path="/downloads/*" element={<Downloads />} />
           </Routes>
         </BrowserRouter>
       </div>
