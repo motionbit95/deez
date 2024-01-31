@@ -2,8 +2,9 @@ import React from "react";
 import "../style/dashboard.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./profile";
-import Downloads from "./downloads";
 import BHeader from "../component/BHeader";
+import Uploadfiles from "./upload/uploadfiles";
+import Adddetails from "./upload/adddetails";
 
 export const DashBoard = () => {
   return (
@@ -13,7 +14,8 @@ export const DashBoard = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/profile/*" element={<Profile />} />
-            <Route path="/downloads/*" element={<Downloads />} />
+            <Route path="/uploadfiles/*" element={<Uploadfiles />} />
+            <Route path="/adddetails/*" element={<Adddetails />} />
           </Routes>
         </BrowserRouter>
       </div>

@@ -1,9 +1,10 @@
 import React from 'react';
+import FileUpload from '../../component/FileUpload';
 
-const downloads = () => {
+const Uploadfiles = () => {
     return (
         <div id="uploadfloor" className="uploadfloor">
-        <div id="uploadscale" className="uploadscale">
+        <div id="uploadfiles" className="uploadfiles">
             <div id="stepbar" className="stepbar">
                 <div>upload files</div>
                 <div>Add details</div>
@@ -14,8 +15,8 @@ const downloads = () => {
                 <hr/>
             </div>
             <div id="dndbox" className="dndbox">
-                <div className="dlicon">아이콘</div>
-                <div className="dnd1">Drag&drop SVG or PNG files</div>
+                <div className="ubutton">Upload is required</div><FileUpload/>
+                <div className="dnd1">Upload SVG or PNG files</div>
                 <div className="dnd2">Or drag and drop a ZIP file for larger packs. The expected review time is 4 to 7 days.</div>
             </div>
             
@@ -47,4 +48,4 @@ const downloads = () => {
     );
 };
 
-export default downloads;
+export default Uploadfiles;

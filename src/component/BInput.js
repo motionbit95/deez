@@ -39,6 +39,7 @@ const TextInput = styled.input`
   font-size: large;
   outline: none;
   color: #444444;
+  line-height: 8px;
 `;
 
 export default BInput;

@@ -98,6 +98,7 @@
     width: 50%;
     cursor: pointer;
     border-radius: 6px;
+    line-height: 8px;
 }
 .C-google{
     display: flex;
@@ -110,11 +111,13 @@
     width: 50%;
     cursor: pointer;
     border-radius: 6px;
+    line-height: 8px;
 }
 
 .d1 {
     font-size: xx-large;
     margin: 20px 0px;
+    line-height: 8px;
 }
 
 .d2 {
@@ -122,6 +125,7 @@
     display: flex;
     align-items: center;
     padding: 0px 3px;
+    line-height: 15px;
 }
 
 .ad {
@@ -158,6 +162,7 @@
     padding: 10px;
     margin: 20px 0px;
     border-radius: 5px;
+    line-height: 8px;
 }
 
 .d-button {
@@ -177,6 +182,7 @@
     cursor: pointer;
     border: 2px solid #9c9c9c;
     border-radius: 5px;
+    line-height: 8px;
 }
 
 .y-button {
@@ -190,23 +196,25 @@
     cursor: pointer;
     border: 2px solid #4c2;
     border-radius: 5px;
+    line-height: 8px;
 }
 
 .uploadfloor {
     background-color: white;
     border-radius: 5px;
-    height: 100vh;
+    height: 100%;
 }
 
-.uploadscale {
+.uploadcontent {
     width: 80vw;
+    max-width: 960px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0px 15px;
     margin: 0px 130px 30px;
-
+    gap: 15px;
 }
 
 .stepbar {
@@ -228,13 +236,11 @@
     border: 4px dashed #4c2;
 }
 
-.dlicon {
+.ubutton {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 128px;
-    height: 128px;
-    margin: 20px 0px;
+    margin: 5px 0px;
 }
 
 .dnd1 {
@@ -242,12 +248,14 @@
     font-weight: 600;
     margin: 0px 0px 20px;
     justify-content: center;
+    line-height: 8px;
 }
 
 .dnd2 {
     font-size: small;
     color: #222222;
     margin: 0px 0px 10px;
+    line-height: 8px;
 }
 
 .cboxs {
@@ -286,6 +294,8 @@
     justify-content: flex-start;
     font-size: larger;
     margin: 7px 3px;
+    padding: 7px 0px;
+    line-height: 8px;
 }
 
 .ctextbox {
@@ -298,4 +308,45 @@
 hr {
     border: 1px solid #222222;
     margin: 13px 0px;
+}
+
+.add-detailbox {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: white;
+}
+
+.add-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: white;
+    margin: 4px 10px;
+}
+
+.d3 {
+    font-size: medium;
+    margin: 10px;
+    padding: 0px 0px 10px;
+    line-height: 8px;
+}
+
+.d4 {
+    font-size: medium;
+    font-weight: 600;
+    line-height: 15px;
+}
+
+.d5 {
+    font-size: small;
+    color: #555555;
+    line-height: 15px;
+}
+
+.d6 {
+    font-size: small;
+    line-height: 15px;
 }

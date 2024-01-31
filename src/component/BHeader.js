@@ -66,6 +66,7 @@ const Logo = styled.div`
   font-size: xx-large;
   color: cadetblue;
   font-weight: 800;
+  line-height: 8px;
 `;
 
 export default BHeader;
