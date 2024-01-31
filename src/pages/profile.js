@@ -56,6 +56,14 @@ export const Profile = () => {
             </div>
           </div>
           <div id="pf-block" className="pf-block">
+            <div id="d2" className="d2">
+              Deez will process your data to send you information about our products and services, promotions, surveys, raffles, based on our legitimate interest, and updates from the creators you follow, if you have consented to this. Your data will not be disclosed to third parties. They will be communicated outside the EU under the terms of the 
+              privacy policy.  
+              You can opt out of our notifications with the first slider.
+              More information
+              </div>
+          </div>
+          <div id="pf-block" className="pf-block">
             <div id="account-close" className="account-close">
               <a id="link" className="link" onClick={moveClose}>
                 Close my account
