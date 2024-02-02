@@ -122,6 +122,7 @@
 
 .d2 {
     font-size: small;
+    color: gray;
     display: flex;
     align-items: center;
     padding: 0px 3px;
@@ -202,30 +203,27 @@
 .uploadfloor {
     background-color: white;
     border-radius: 5px;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .uploadcontent {
     width: 80vw;
     max-width: 960px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 15px;
-    margin: 0px 130px 30px;
+    padding: 0px 50px;
+    margin: 0px 0px 30px;
     gap: 15px;
 }
 
-.stepbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0px;
-    padding: 0px 15px;
-    gap: 100px;
-}
 
+.d1floor {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px;
+}
 .dndbox {
     display: flex;
     justify-content: center;
@@ -233,7 +231,8 @@
     flex-direction: column;
     margin: 20px 0px 50px;
     padding: 40px;
-    border: 4px dashed #4c2;
+    border: 5px dashed #4c2;
+    border-radius: 5px;
 }
 
 .ubutton {
@@ -253,7 +252,8 @@
 
 .dnd2 {
     font-size: small;
-    color: #222222;
+    font-weight: 500;
+    color: gray;
     margin: 0px 0px 10px;
     line-height: 8px;
 }
@@ -277,9 +277,8 @@
     flex-direction: column;
     width: 100%;
     height: 280px;
-    border: 1px solid rgb(214, 206, 206);
+    border: 1px solid gray;
     border-radius: 4px;
-
 }
 
 .cicon {
@@ -293,9 +292,8 @@
     display: flex;
     justify-content: flex-start;
     font-size: larger;
-    margin: 7px 3px;
-    padding: 7px 0px;
-    line-height: 8px;
+    font-weight: 600;
+    margin: 7px 0px;
 }
 
 .ctextbox {
@@ -306,47 +304,249 @@
 }
 
 hr {
-    border: 1px solid #222222;
+    border: 1px solid #cccccc;
     margin: 13px 0px;
 }
 
-.add-detailbox {
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 10px;
-    background-color: white;
-}
-
-.add-box {
+.card-box {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 15px;
-    background-color: white;
-    margin: 4px 10px;
+    width: 100%;
+    border: 1px solid rgb(214, 206, 206);
+    border-radius: 4px;
 }
 
-.d3 {
+.card-header {
+    padding: 10px 15px 0px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 17px;
+}
+
+.alt-box {
+    background-color: #cde8f7;
+    padding: 15px;
+    border: 1px solid #9c9c9c;
+    border-radius: 3px;
+    margin-bottom: 14px;
+}
+
+.nextbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f9978;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    border: 1px solid #1f9978;
+    border-radius: 4px;
+}
+
+.d-1 {
+    font-size: large;
+}
+
+.d-2 {
     font-size: medium;
-    margin: 10px;
-    padding: 0px 0px 10px;
-    line-height: 8px;
+    margin: 0px 0px 7px;
 }
 
 .d4 {
     font-size: medium;
-    font-weight: 600;
-    line-height: 15px;
+    margin: 0px 0px 4px;
 }
 
 .d5 {
-    font-size: small;
-    color: #555555;
-    line-height: 15px;
+    font-size: large;
+    margin: 0px 0px 7px;
 }
 
 .d6 {
+    font-size: 14px;
+    margin: 0px 0px 7px;
+    font-weight: 500;
+}
+
+.d7 {
+    font-size: 14px;
+    margin: 0px 0px 14px;
+    color: gray;
+}
+
+.d8 {
+    font-size: medium;
+    margin: 0px 0px 4px;
+}
+
+
+.flex-box {
+    display: flex;
+}
+
+.black-box {
+    background-color: black;
+}
+
+.padding-box {
+    padding: 10px;
+}
+
+.cbox2 {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    padding: 0px 15px;
+}
+
+.cbox-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.md1 {
+    display: flex;
+    justify-content: right;
+    padding: 0px 10px;
+}
+
+.md1button {
     font-size: small;
-    line-height: 15px;
+    padding: 5px 10px;
+    border-radius: 6px;
+
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 3px 7px;
+    cursor: pointer;
+}
+
+.tap-row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.preview-tap {
+    display: flex;
+    justify-content: center;
+    color : gray;
+    padding: 10px;
+    width: 150px;
+}
+
+.tag1-tap {
+    display: flex;
+    color: gray;
+    padding: 10px;
+    width: 80%;
+}
+
+.checkbox-tap {
+    padding: 10px;
+}
+
+.growbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.g50box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0px 0px 20px;
+}
+
+.g100box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 0px 20px;
+}
+
+.input1 {
+    width: 95%;
+    padding: 5px 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    
+}
+
+.input2 {
+    width: 95%;
+    resize: vertical;
+    padding: 5px 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+
+.cashblock{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    margin-left: 20px;
+    background-color: #cccccc;
+}
+
+.jw {
+    background-color: #feeed1;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    padding: 10px 17px;
+    margin: 0px 0px 14px;
+}
+
+.show {
+    color: white;
+    font-size: small;
+    background-color: #1f9978;
+    border: 1px solid #1f9978;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.image-preview {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #9c9c9c;
+}
+
+.input3 {
+    display: flex;
+    width: 80%;
+    padding: 10px;;
+    resize: none;
+}
+
+.backbutton {
+    background-color: white;
+    border: 1px solid #9c9c9c;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.completebutton {
+    color: white;
+    background-color: #1f9978;
+    border: 1px solid #1f9978;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
 }

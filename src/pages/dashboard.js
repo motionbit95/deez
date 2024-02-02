@@ -5,6 +5,7 @@ import Profile from "./profile";
 import BHeader from "../component/BHeader";
 import Uploadfiles from "./upload/uploadfiles";
 import Adddetails from "./upload/adddetails";
+import Addtags from "./upload/addtags";
 
 export const DashBoard = () => {
   return (
@@ -16,6 +17,7 @@ export const DashBoard = () => {
             <Route path="/profile/*" element={<Profile />} />
             <Route path="/uploadfiles/*" element={<Uploadfiles />} />
             <Route path="/adddetails/*" element={<Adddetails />} />
+            <Route path="/addtags/*" element={<Addtags />} />
           </Routes>
         </BrowserRouter>
       </div>
