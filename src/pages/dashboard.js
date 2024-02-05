@@ -7,6 +7,7 @@ import Uploadfiles from "./upload/uploadfiles";
 import Adddetails from "./upload/adddetails";
 import Addtags from "./upload/addtags";
 import Testpage from "./testpage";
+import ResultForm from "../component/ResultForm";
 
 export const DashBoard = () => {
   return (
@@ -20,6 +21,7 @@ export const DashBoard = () => {
             <Route path="/adddetails/*" element={<Adddetails />} />
             <Route path="/addtags/*" element={<Addtags />} />
             <Route path="/testpage/*" element={<Testpage />} />
+            <Route path="/result/*" element={<ResultForm />} />
           </Routes>
         </BrowserRouter>
       </div>
