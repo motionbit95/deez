@@ -104,6 +104,100 @@ const testpage = () => {
   }
 
   // 9. 배열
+  function test9() {
+    // Array
+    const a = [1, 2, 3];
+    const b = [4, 5, 6];
+    const c = [...a, ...b];
+    console.log(c); // [1, 2, 3, 4, 5, 6]
+
+    let array = [
+      { name: "홍길동", age: 20 },
+      { name: "박진영", age: 21 },
+      { name: "홍길동", age: 20 },
+    ];
+
+    // Map - 객체와 유사
+    // 순서 보장, 중복 가능, 반복문 사용 가능
+    const map = new Map();
+
+    // 데이터 추가
+    map.set("name", "홍길동");
+    map.set("age", 20);
+    console.log(map);
+
+    array = [...array, map];
+
+    map.forEach((key, value) => console.log(key, value));
+
+    // 데이터 가지고오기
+    map.get("name"); // 홍길동
+    map.get("age"); // 20
+
+    // 데이터 삭제
+    map.delete("age");
+
+    // 데이터 변경
+    map.set("name", "박진영");
+
+    // 데이터가 있나요??
+    map.has("name"); // true
+    map.has("age"); // false
+
+    // map 사이즈를 가지고 오거나, 설정할 수 있다.
+    //map.size; // 1
+    //map.size = 3;
+
+    // map 다 삭제
+    map.clear();
+
+    array.map((value, index) => {
+      console.log(value.name, index);
+      console.log(value.age, index);
+    });
+
+    // set - 배열과 유사
+    // 중복 허용 X, 반복문 사용 가능
+
+    const set = new Set();
+    set.add("name");
+    set.add("age");
+    set.add("phone");
+
+    // ["name", "age", "phone"]
+    set.add("name");
+    // ["name", "age", "phone"]
+
+    set.forEach((element) => {
+      console.log(element);
+    });
+
+    const size = set.size;
+
+    set.delete("name");
+    set.has("name"); // false
+    set.clear();
+
+    // set -> array
+    const _set = new Set(_array);
+    // array -> set
+    const _array = Array.from(_set);
+  }
+
+  // 10. 널 병합 / 옵셔널 체인징
+  function test10() {
+    // ?
+    // ?? -> null ? undefined ? -> 조건만 따져
+    // ?. -> 값이 없으면 실행을 안해. null ? undefined ? NaN(10 / 0) ? 0 ? "" ? false
+
+    const age = 25;
+    const isYoung = age < 20;
+    const name = isYoung ? "어려" : "늙었어";
+
+    const obj = { name: "홍길동", age: 20 };
+    console.log(obj.name);
+    console.log(obj?.address?.street);
+  }
 
   return (
     <div>
