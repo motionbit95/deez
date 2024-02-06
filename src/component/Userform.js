@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { db } from "../firebase/firebase_conf";
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDoc,
+  getDocs,
+  updateDoc,
+} from "@firebase/firestore";
 
 const Userform = () => {
   const navigate = useNavigate();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [userList, setUserList] = useState([]);
 
   const [formData, serFormData] = useState({
     name: "",
@@ -14,6 +25,56 @@ const Userform = () => {
     gender: "",
     hobby: [],
   });
+
+  useEffect(() => {
+    getUserList();
+  }, []);
+
+  // create (유저 추가)
+  const addUser = async () => {
+    const docRef = await addDoc(collection(db, "CRUD_TEST"), formData);
+    console.log("Document written with ID: ", docRef.id);
+
+    window.location.reload();
+  };
+
+  // read (전체 리스트 조회)
+  const getUserList = async () => {
+    const querySnapshot = await getDocs(collection(db, "CRUD_TEST"));
+    let arr = [];
+    querySnapshot.forEach((doc) => {
+      // uid를 꼭 넣어준다.
+      arr.push({ uid: doc.id, ...doc.data() });
+      setUserList(arr);
+      console.log(doc.id, " => ", doc.data());
+    });
+  };
+
+  // read (하나의 특정 데이터 조회)
+  const getUser = async (uid) => {
+    const docRef = doc(db, "CRUD_TEST", uid);
+    const docSnap = await getDoc(docRef);
+    console.log(docSnap.id, " => ", docSnap.data());
+    return docSnap.data();
+  };
+
+  // update (유저 수정)
+  const updateUser = async (uid) => {
+    const originData = await getUser(uid);
+    const updateData = { ...originData, password: "test1234!@" };
+    await updateDoc(doc(db, "CRUD_TEST", uid), updateData);
+
+    getUserList();
+    window.location.reload();
+  };
+
+  // delete (유저 삭제)
+  const deleteUser = async (uid) => {
+    await deleteDoc(doc(db, "CRUD_TEST", uid));
+
+    getUserList();
+    window.location.reload();
+  };
 
   const handleInputChange = (e) => {
     const { name, value, checked } = e.target;
@@ -56,12 +117,32 @@ const Userform = () => {
     const queryString = params.toString();
     console.log(queryString);
 
-    const url = `/result?${queryString}`;
-    navigate(url);
+    // firebase에 User를 추가한다.
+    addUser();
+
+    // const url = `/result?${queryString}`;
+    // navigate(url);
   };
 
   return (
     <UForm>
+      <div>
+        {userList.map((user) => (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              flexDirection: "row",
+            }}
+          >
+            <div onClick={() => getUser(user.uid)} key={user.uid}>
+              {user.name}
+            </div>
+            <div onClick={() => updateUser(user.uid)}>업데이트</div>
+            <div onClick={() => deleteUser(user.uid)}>삭제</div>
+          </div>
+        ))}
+      </div>
       <TTT>Sign Up</TTT>
       <form onSubmit={handleSignUp}>
         <UBox>
