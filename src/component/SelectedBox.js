@@ -34,18 +34,18 @@ const SelectedBox = () => {
         <SelectBox>
           {RadioContent(
             1,
-            "Free",
-            "Free pack",
-            "This is my pack that I want to offer for free on the Iconfinder marketplace"
+            "Premium",
+            "Premium pack",
+            "This is a premium pack I want to sell on the Iconfinder marketplace."
           )}
         </SelectBox>
       ) : (
         <Boxon>
           {RadioContent(
             1,
-            "Free",
-            "Free pack",
-            "This is my pack that I want to offer for free on the Iconfinder marketplace"
+            "Premium",
+            "Premium pack",
+            "This is a premium pack I want to sell on the Iconfinder marketplace."
           )}
         </Boxon>
       )}
@@ -72,18 +72,18 @@ const SelectedBox = () => {
         <SelectBox>
           {RadioContent(
             3,
-            "Free",
-            "Free pack",
-            "This is my pack that I want to offer for free on the Iconfinder marketplace"
+            "Someone",
+            "Someone else's free pack",
+            "This is someone else's pack that's available elsewhere."
           )}
         </SelectBox>
       ) : (
         <Boxon>
           {RadioContent(
             3,
-            "Free",
-            "Free pack",
-            "This is my pack that I want to offer for free on the Iconfinder marketplace"
+            "Someone",
+            "Someone else's free pack",
+            "This is someone else's pack that's available elsewhere."
           )}
         </Boxon>
       )}
@@ -97,6 +97,8 @@ const SelectBox = styled.div`
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
 `;
 
 const Boxon = styled.div`
@@ -105,6 +107,8 @@ const Boxon = styled.div`
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
 `;
 
 export default SelectedBox;

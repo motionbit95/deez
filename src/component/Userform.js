@@ -180,6 +180,7 @@ const TLable = styled.label`
 
 const UBox = styled.div`
   display: flex;
+  justify-content: space-between;
   padding: 10px;
 `;
 
