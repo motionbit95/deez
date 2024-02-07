@@ -7,6 +7,7 @@ export const SignIn = () => {
     // 회원가입 페이지로 이동
     navigate("/signup");
   }
+
   return (
     <>
       <div id="logo" className="logo">

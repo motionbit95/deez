@@ -131,3 +131,81 @@ div {
     text-align: center;
     width: 100%;
 }
+
+.form >.signinbuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px 0px 15px 0px;
+    width: 100%;
+    gap: 4vh;
+}
+
+.signinbuttons >.signin_button {
+    color: #424242;
+    background-color: white;
+    padding: 15px;
+    border-color: #9c9c9c;
+    border-width: 2px;
+    border-radius: 100%;
+    border-style: solid;
+    font-size: small;
+    line-height: 8px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.signin_button >.loginicon {
+    width: 20px;
+    height: 20px;
+}
+
+.form >.elogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    line-height: 8px;
+}
+
+.emailloginbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.emailloginbox >.etext{
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+    padding: 10px;
+}
+
+.emailloginbox > .einput {
+    display: flex;
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 30px;
+  }
+
+.esubmit {
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid  #5F9EA0;
+    background-color: #5F9EA0;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}

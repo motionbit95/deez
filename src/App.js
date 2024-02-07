@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DashBoard } from "./pages/dashboard";
 
 function App() {
-  const isAuth = true;
+  const isAuth = false;
   return <>{!isAuth ? <Layout /> : <DashBoard />}</>;
 }
 
