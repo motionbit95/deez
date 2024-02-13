@@ -8,7 +8,9 @@ import { DashBoard } from "./pages/dashboard";
 import { Home } from "./pages/home";
 
 function App() {
-  return <Home />;
+  return (
+    <>{window.location.pathname.includes("sign") ? <Layout /> : <Home />}</>
+  );
 }
 
 export default App;

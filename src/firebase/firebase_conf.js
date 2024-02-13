@@ -25,5 +25,7 @@ export const app = initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
 export const db = getFirestore(app);
 
-// const analytics = getAnalytics(app);
+// firebase의 firestore 인스턴스를 변수에 저장
 export const storage = getStorage(app);
+
+// const analytics = getAnalytics(app);

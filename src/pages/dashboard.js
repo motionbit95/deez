@@ -8,11 +8,12 @@ import Adddetails from "./upload/adddetails";
 import Addtags from "./upload/addtags";
 import Testpage from "./testpage";
 import ResultForm from "../component/ResultForm";
+import { Header } from "nabit-ui-test";
 
 export const DashBoard = () => {
   return (
     <div id="container" className="container">
-      <BHeader />
+      <Header onLogin={() => window.location.replace("/signin")} />
       <div id="body" className="body">
         <BrowserRouter>
           <Routes>
