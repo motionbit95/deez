@@ -1,208 +1,217 @@
 img {
-    width: 100%;
-    max-height: 100vh;
-    object-fit: cover;
+  width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
 }
 
 div {
-    font-family: 'Poppins';
+  font-family: var(--font-family);
 }
 
 .layout {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    min-height: 100vh;
-    justify-content: center;
-    min-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  min-height: 100vh;
+  justify-content: center;
+  min-width: 400px;
 }
 
-.layout >.blank {
-    /* height: auto;
+.layout > .blank {
+  /* height: auto;
     width: 100%; */
-    background-color: aqua;
-    display: flex;
-    flex: 1;
+  background-color: aqua;
+  display: flex;
+  flex: 1;
 
-    @media screen and (max-width: 720px){
-        display: none;
-    }
-
-
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
 }
 
-.layout >.form {
-    padding: 40px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    width: 50%;
-    max-width: 500px;
-    @media screen and (max-width: 720px){
-        width: 100%;
-    }
-}
-
-.form >.logo {
-    display: flex;
-    justify-content: center;
-    width: 30%;
-    margin: 50px 0px;
-    line-height: 8px;
-}
-
-.form >.label {
-    color: #444444;
-    font-size: x-large;
-    font-weight: 600;
-    margin: 0px 0px 50px 0px;
-    line-height: 8px;
-}
-
-.form >.checkbox {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    line-height: 20px;
-    color: #8c8c8c;
-}
-
-.form >.t1 {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    gap: 10px;
-    text-align: center;
-}
-
-.t1 >.link {
-    color: cadetblue;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.form >.agree {
-    font-size: smaller;
-    color: #424242;
-    line-height: 8px;
-}
-
-.form >.buttons {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 0px 32px 0px;
+.layout > .form {
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 50%;
+  max-width: 500px;
+  @media screen and (max-width: 720px) {
     width: 100%;
-    max-width: 320px;
-    gap: 2vh;
+  }
 }
 
-.buttons >.login_button {
-    color: #424242;
-    background-color: white;
-    padding: 10px 20px;
-    border-color: #9c9c9c;
-    border-width: 2px;
-    border-radius: 5px;
-    border-style: solid;
-    font-size: small;
-    line-height: 8px;
-    cursor: pointer;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
+.form > .logo {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 50px 0px;
+  line-height: 8px;
 }
 
-.login_button >.icon {
-    position: absolute;
-    width: 20px;
-    height: 20px;
+.form > .label {
+  color: #444444;
+  font-size: x-large;
+  font-weight: 600;
+  margin: 0px 0px 50px 0px;
+  line-height: 8px;
 }
 
-.login_button >.text {
-    text-align: center;
-    width: 100%;
+.form > .checkbox {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  line-height: 20px;
+  color: #8c8c8c;
 }
 
-.form >.signinbuttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0px 0px 15px 0px;
-    width: 100%;
-    gap: 4vh;
+.form > .t1 {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 10px;
+  text-align: center;
+  margin-top: 20px;
+  white-space: nowrap;
 }
 
-.signinbuttons >.signin_button {
-    color: #424242;
-    background-color: white;
-    padding: 15px;
-    border-color: #9c9c9c;
-    border-width: 2px;
-    border-radius: 100%;
-    border-style: solid;
-    font-size: small;
-    line-height: 8px;
-    cursor: pointer;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
+.t1 > .link {
+  color: cadetblue;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.signin_button >.loginicon {
-    width: 20px;
-    height: 20px;
+.form > .agree {
+  font-size: smaller;
+  color: #424242;
+  line-height: 8px;
 }
 
-.form >.elogin {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    line-height: 8px;
+.form > .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px 0px 8px 0px;
+  width: 100%;
+  max-width: 320px;
+  gap: 2vh;
+}
+
+.buttons > .login_button {
+  color: #424242;
+  background-color: white;
+  padding: 10px 20px;
+  border-color: #9c9c9c;
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: solid;
+  font-size: small;
+  line-height: 8px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.login_button > .icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.login_button > .text {
+  text-align: center;
+  width: 100%;
+}
+
+.form > .signinbuttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px 0px 15px 0px;
+  width: 100%;
+  gap: 4vh;
+}
+
+.signinbuttons > .signin_button {
+  color: #424242;
+  background-color: white;
+  padding: 15px;
+  border-color: #9c9c9c;
+  border-width: 2px;
+  border-radius: 100%;
+  border-style: solid;
+  font-size: small;
+  line-height: 8px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.signin_button > .loginicon {
+  width: 20px;
+  height: 20px;
+}
+
+.form > .elogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 8px;
 }
 
 .emailloginbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
 }
 
-.emailloginbox >.etext{
-    display: flex;
-    justify-content: center;
-    font-size: medium;
-    padding: 10px;
+.emailloginbox > .etext {
+  display: flex;
+  justify-content: center;
+  font-size: medium;
+  padding: 10px;
 }
 
 .emailloginbox > .einput {
-    display: flex;
-    background-color: #eee;
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 30px;
-  }
+  display: flex;
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 30px;
+}
 
 .esubmit {
-    cursor: pointer;
-    border-radius: 20px;
-    border: 1px solid  #5F9EA0;
-    background-color: #5F9EA0;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid #5f9ea0;
+  background-color: #5f9ea0;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+.login-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

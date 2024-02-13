@@ -6,7 +6,9 @@ import {
   signInWithPopup,
   FacebookAuthProvider,
   signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
 } from "firebase/auth";
+import { Button, IconButton, Input } from "nabit-ui-test";
 
 export const SignUp = () => {
   const navigate = useNavigate();
@@ -15,29 +17,35 @@ export const SignUp = () => {
     navigate("/signin");
   }
 
-  const provider = new GoogleAuthProvider();
-
   const emailSingup = (e) => {
     e.preventDefault();
 
     console.log(e.target[0].value, e.target[1].value, e.target[2].value);
 
     const auth = getAuth();
-    signInWithEmailAndPassword(auth, e.target[1].value, e.target[2].value)
+    createUserWithEmailAndPassword(auth, e.target[1].value, e.target[2].value)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
         // ...
+
+        // 회원가입을 완료하였다면 로그인 페이지로 이동
+        if (user) {
+          window.location.replace("/signin");
+        }
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        // ..
+
+        alert(errorMessage);
       });
   };
 
   const googleSingup = (e) => {
     const auth = getAuth();
-    signInWithPopup(auth, provider)
+    signInWithPopup(auth, new GoogleAuthProvider())
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -61,7 +69,7 @@ export const SignUp = () => {
 
   const facebookSingup = (e) => {
     const auth = getAuth();
-    signInWithPopup(auth, provider)
+    signInWithPopup(auth, new FacebookAuthProvider())
       .then((result) => {
         // The signed-in user info.
         const user = result.user;
@@ -92,23 +100,46 @@ export const SignUp = () => {
       <div id="label" className="label">
         Create an account
       </div>
-      <div id="signinbuttons" className="signinbuttons">
-        <div className="signin_button" onClick={googleSingup}>
-          <img className="loginicon" src={require("../image/google.png")} />
-        </div>
-        <div className="signin_button" onClick={facebookSingup}>
-          <img className="loginicon" src={require("../image/facebook.png")} />
-        </div>
+      <div id="buttons" className="buttons">
+        <IconButton
+          onClick={googleSingup}
+          icon={"https://img.icons8.com/color/48/000000/google-logo.png"}
+        />
+        <IconButton
+          onClick={facebookSingup}
+          icon={"https://img.icons8.com/color/48/000000/facebook-new.png"}
+        />
       </div>
       <form id="elogin" className="elogin" onSubmit={emailSingup}>
         <div className="emailloginbox">
-          <input type="text" placeholder="Name" className="einput" />
+          <Input
+            type="text"
+            placeholder="Please enter your name"
+            label={"Name"}
+            isRequired
+          />
+          <Input
+            type="email"
+            placeholder="Please enter your email"
+            label={"Email"}
+            isRequired
+          />
+          <Input
+            type="password"
+            placeholder="Please enter your password"
+            label={"Password"}
+            isRequired
+          />
+          {/* <input type="text" placeholder="Name" className="einput" />
           <input type="email" placeholder="Email" className="einput" />
-          <input type="password" placeholder="Password" className="einput" />
+          <input type="password" placeholder="Password" className="einput" /> */}
         </div>
-        <button type="submit" className="esubmit">
-          Sign Up
-        </button>
+        <Button
+          type={"submit"}
+          label={"Sign Up"}
+          primary={true}
+          style={{ width: "100px" }}
+        />
       </form>
       <div className="checkbox">
         <input type="checkbox" />

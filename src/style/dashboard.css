@@ -1,553 +1,553 @@
+div {
+  font-family: var(--font-family);
+}
+
 .container {
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container > .body {
-    /* height: 2000px; */
-    /* width: 100%; */
-    min-height: 74vh;
-    background-color: #f1f1f1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  /* height: 2000px; */
+  /* width: 100%; */
+  min-height: 74vh;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.container >.footer {
-    height: 20vh;
-    width: 100%;
-    background-color: var(--primary-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.container > .footer {
+  height: 20vh;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .d-profile {
-    display: flex;
-    width: 100%;
-    max-width: 960px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
 
-    @media screen and (max-width: 720px){
-        flex-direction: column;
-        align-items: center;
-    }
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .avatar-circle {
-    overflow: hidden;
-    border-radius: 50%
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .avatar-box {
-    background-color: white;
-    width: 25vh;
-    height: 10%;
-        border-radius: 4px;
+  background-color: white;
+  width: 25vh;
+  height: 10%;
+  border-radius: 4px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #f1f1f1;
-    padding: 30px 30px;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f1f1f1;
+  padding: 30px 30px;
+  gap: 15px;
 }
 
 .contents {
-    background-color: white;
-    border: 1px solid #f1f1f1;
-    border-radius: 4px;
+  background-color: white;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
 
-    height: 100%;
+  height: 100%;
 
-    @media screen and (min-width: 720px){
-        width: 100%;
-    }
+  @media screen and (min-width: 720px) {
+    width: 100%;
+  }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px;
 }
 
 .connect-social {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
 }
 
-.C-facebook{
-    display: flex;
-    font-size: small;
-    background-color: #3b5998;
-    color: white;
-    justify-content: center;
-    padding: 12px;
-    width: 50%;
-    cursor: pointer;
-    border-radius: 6px;
-    line-height: 8px;
+.C-facebook {
+  display: flex;
+  font-size: small;
+  background-color: #3b5998;
+  color: white;
+  justify-content: center;
+  padding: 12px;
+  width: 50%;
+  cursor: pointer;
+  border-radius: 6px;
+  line-height: 8px;
 }
-.C-google{
-    display: flex;
-    font-size: small;
-    background-color: white;
-    color: #222222;
-    text-align: center;
-    justify-content: center;
-    padding: 12px;
-    width: 50%;
-    cursor: pointer;
-    border-radius: 6px;
-    line-height: 8px;
+.C-google {
+  display: flex;
+  font-size: small;
+  background-color: white;
+  color: #222222;
+  text-align: center;
+  justify-content: center;
+  padding: 12px;
+  width: 50%;
+  cursor: pointer;
+  border-radius: 6px;
+  line-height: 8px;
 }
 
 .d1 {
-    font-size: xx-large;
-    margin: 20px 0px;
-    line-height: 8px;
+  font-size: xx-large;
+  margin: 20px 0px;
+  line-height: 8px;
 }
 
 .d2 {
-    font-size: small;
-    color: gray;
-    display: flex;
-    align-items: center;
-    padding: 0px 3px;
-    line-height: 15px;
+  font-size: small;
+  color: gray;
+  display: flex;
+  align-items: center;
+  padding: 0px 3px;
+  line-height: 15px;
 }
 
 .ad {
-    display: flex;
-    /* width: 50%; */
-    max-width: 450px;
-    gap: 20px;
-    flex-direction: column;
+  display: flex;
+  /* width: 50%; */
+  max-width: 450px;
+  gap: 20px;
+  flex-direction: column;
 }
 
 .swicth-c {
-    background-color: white;
-    border: 1px solid #9c9c9c;
-    border-radius: 4px;
-    display: flex;
-    justify-content:space-between;
-    padding: 15px;
-    margin: 0px 0px 10px;
+  background-color: white;
+  border: 1px solid #9c9c9c;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 0px 0px 10px;
 }
 
 .pf-block {
-    padding: 30px 0px 0px;
+  padding: 30px 0px 0px;
 }
 
 .account-close {
-    background-color: #f5f8f9;
-    color: red;
-    width: 100px;
-    text-align: center;
-    border-radius: 1px;
-    font-size:xx-small;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 10px;
-    margin: 20px 0px;
-    border-radius: 5px;
-    line-height: 8px;
+  background-color: #f5f8f9;
+  color: red;
+  width: 100px;
+  text-align: center;
+  border-radius: 1px;
+  font-size: xx-small;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px 0px;
+  border-radius: 5px;
+  line-height: 8px;
 }
 
 .d-button {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .cancel-button {
-    display: flex;
-    font-size: medium;
-    background-color: white;
-    color: #222222;
-    text-align: center;
-    justify-content: center;
-    padding: 12px;
-    cursor: pointer;
-    border: 2px solid #9c9c9c;
-    border-radius: 5px;
-    line-height: 8px;
+  display: flex;
+  font-size: medium;
+  background-color: white;
+  color: #222222;
+  text-align: center;
+  justify-content: center;
+  padding: 12px;
+  cursor: pointer;
+  border: 2px solid #9c9c9c;
+  border-radius: 5px;
+  line-height: 8px;
 }
 
 .y-button {
-    display: flex;
-    font-size: medium;
-    background-color: #4c2;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    padding: 12px;
-    cursor: pointer;
-    border: 2px solid #4c2;
-    border-radius: 5px;
-    line-height: 8px;
+  display: flex;
+  font-size: medium;
+  background-color: #4c2;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding: 12px;
+  cursor: pointer;
+  border: 2px solid #4c2;
+  border-radius: 5px;
+  line-height: 8px;
 }
 
 .uploadfloor {
-    background-color: white;
-    border-radius: 5px;
-    /* height: 100%; */
+  background-color: white;
+  border-radius: 5px;
+  /* height: 100%; */
 }
 
 .uploadcontent {
-    width: 80vw;
-    max-width: 960px;
-    /* min-height: 100vh; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 50px;
-    margin: 0px 0px 30px;
-    gap: 15px;
+  width: 80vw;
+  max-width: 960px;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 50px;
+  margin: 0px 0px 30px;
+  gap: 15px;
 }
-
 
 .d1floor {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 30px;
 }
 .dndbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 0px 50px;
-    padding: 40px;
-    border: 5px dashed #4c2;
-    border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0px 50px;
+  padding: 40px;
+  border: 5px dashed #4c2;
+  border-radius: 5px;
 }
 
 .ubutton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px;
 }
 
 .dnd1 {
-    font-size: x-large;
-    font-weight: 600;
-    margin: 0px 0px 20px;
-    justify-content: center;
-    line-height: 8px;
+  font-size: x-large;
+  font-weight: 600;
+  margin: 0px 0px 20px;
+  justify-content: center;
+  line-height: 8px;
 }
 
 .dnd2 {
-    font-size: small;
-    font-weight: 500;
-    color: gray;
-    margin: 0px 0px 10px;
-    line-height: 8px;
+  font-size: small;
+  font-weight: 500;
+  color: gray;
+  margin: 0px 0px 10px;
+  line-height: 8px;
 }
 
 .cboxs {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 0px 40px;
-    gap: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 40px;
+  gap: 30px;
 
-    @media screen and (max-width: 720px){
-        flex-direction: column;
-        align-items: center;
-    }
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .cbox {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 280px;
-    border: 1px solid gray;
-    border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 280px;
+  border: 1px solid gray;
+  border-radius: 4px;
 }
 
 .cicon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
 }
 
 .ctext {
-    display: flex;
-    justify-content: flex-start;
-    font-size: larger;
-    font-weight: 600;
-    margin: 7px 0px;
+  display: flex;
+  justify-content: flex-start;
+  font-size: larger;
+  font-weight: 600;
+  margin: 7px 0px;
 }
 
 .ctextbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
 
 hr {
-    border: 1px solid #cccccc;
-    margin: 13px 0px;
+  border: 1px solid #cccccc;
+  margin: 13px 0px;
 }
 
 .card-box {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border: 1px solid rgb(214, 206, 206);
-    border-radius: 4px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid rgb(214, 206, 206);
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .card-header {
-    padding: 10px 15px 0px;
+  padding: 10px 15px 0px;
 }
 
 .card-body {
-    padding: 15px;
+  padding: 15px;
 }
 
 .card-footer {
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 17px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 17px;
 }
 
 .alt-box {
-    background-color: #cde8f7;
-    padding: 15px;
-    border: 1px solid #9c9c9c;
-    border-radius: 3px;
-    margin-bottom: 14px;
+  background-color: #cde8f7;
+  padding: 15px;
+  border: 1px solid #9c9c9c;
+  border-radius: 3px;
+  margin-bottom: 14px;
 }
 
 .nextbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1f9978;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f9978;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
 
-    border: 1px solid #1f9978;
-    border-radius: 4px;
+  border: 1px solid #1f9978;
+  border-radius: 4px;
 }
 
 .d-1 {
-    font-size: large;
+  font-size: large;
 }
 
 .d-2 {
-    font-size: medium;
-    margin: 0px 0px 7px;
+  font-size: medium;
+  margin: 0px 0px 7px;
 }
 
 .d4 {
-    font-size: medium;
-    margin: 0px 0px 4px;
+  font-size: medium;
+  margin: 0px 0px 4px;
 }
 
 .d5 {
-    font-size: large;
-    margin: 0px 0px 7px;
+  font-size: large;
+  margin: 0px 0px 7px;
 }
 
 .d6 {
-    font-size: 14px;
-    margin: 0px 0px 7px;
-    font-weight: 500;
+  font-size: 14px;
+  margin: 0px 0px 7px;
+  font-weight: 500;
 }
 
 .d7 {
-    font-size: 14px;
-    margin: 0px 0px 14px;
-    color: gray;
+  font-size: 14px;
+  margin: 0px 0px 14px;
+  color: gray;
 }
 
 .d8 {
-    font-size: medium;
-    margin: 0px 0px 4px;
+  font-size: medium;
+  margin: 0px 0px 4px;
 }
 
-
 .flex-box {
-    display: flex;
+  display: flex;
 }
 
 .black-box {
-    background-color: black;
+  background-color: black;
 }
 
 .padding-box {
-    padding: 10px;
+  padding: 10px;
 }
 
 .cbox2 {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  padding: 0px 15px;
 }
 
 .cbox-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .md1 {
-    display: flex;
-    justify-content: right;
-    padding: 0px 10px;
+  display: flex;
+  justify-content: right;
+  padding: 0px 10px;
 }
 
 .md1button {
-    font-size: small;
-    padding: 5px 10px;
-    border-radius: 6px;
+  font-size: small;
+  padding: 5px 10px;
+  border-radius: 6px;
 
-
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    padding: 3px 7px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 3px 7px;
+  cursor: pointer;
 }
 
 .tap-row {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .preview-tap {
-    display: flex;
-    justify-content: center;
-    color : gray;
-    padding: 10px;
-    width: 150px;
+  display: flex;
+  justify-content: center;
+  color: gray;
+  padding: 10px;
+  width: 150px;
 }
 
 .tag1-tap {
-    display: flex;
-    color: gray;
-    padding: 10px;
-    width: 80%;
+  display: flex;
+  color: gray;
+  padding: 10px;
+  width: 80%;
 }
 
 .checkbox-tap {
-    padding: 10px;
+  padding: 10px;
 }
 
 .growbox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .g50box {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 0px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0px 0px 20px;
 }
 
 .g100box {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px 0px 20px;
 }
 
 .input1 {
-    width: 95%;
-    padding: 5px 10px;
-    border: 1px solid #d9d9d9;
-    border-radius: 5px;
-    
+  width: 95%;
+  padding: 5px 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
 }
 
 .input2 {
-    width: 95%;
-    resize: vertical;
-    padding: 5px 10px;
-    border: 1px solid #d9d9d9;
-    border-radius: 5px;
+  width: 95%;
+  resize: vertical;
+  padding: 5px 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
 }
 
-.cashblock{
-    display: flex;
-    flex-direction: row;
-    border: 1px solid #d9d9d9;
-    border-radius: 3px;
-    margin-left: 20px;
-    background-color: #cccccc;
+.cashblock {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  margin-left: 20px;
+  background-color: #cccccc;
 }
 
 .jw {
-    background-color: #feeed1;
-    border: 1px solid #d9d9d9;
-    border-radius: 3px;
-    padding: 10px 17px;
-    margin: 0px 0px 14px;
+  background-color: #feeed1;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  padding: 10px 17px;
+  margin: 0px 0px 14px;
 }
 
 .show {
-    color: white;
-    font-size: small;
-    background-color: #1f9978;
-    border: 1px solid #1f9978;
-    padding: 5px 10px;
-    border-radius: 6px;
+  color: white;
+  font-size: small;
+  background-color: #1f9978;
+  border: 1px solid #1f9978;
+  padding: 5px 10px;
+  border-radius: 6px;
 }
 
 .image-preview {
-    display: flex;
-    justify-content: center;
-    width: 150px;
-    height: 150px;
-    border: 1px solid #9c9c9c;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #9c9c9c;
 }
 
 .input3 {
-    display: flex;
-    width: 80%;
-    padding: 10px;;
-    resize: none;
+  display: flex;
+  width: 80%;
+  padding: 10px;
+  resize: none;
 }
 
 .backbutton {
-    background-color: white;
-    border: 1px solid #9c9c9c;
-    padding: 5px 10px;
-    border-radius: 6px;
-    cursor: pointer;
+  background-color: white;
+  border: 1px solid #9c9c9c;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .completebutton {
-    color: white;
-    background-color: #1f9978;
-    border: 1px solid #1f9978;
-    padding: 5px 10px;
-    border-radius: 6px;
-    cursor: pointer;
+  color: white;
+  background-color: #1f9978;
+  border: 1px solid #1f9978;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
 }
