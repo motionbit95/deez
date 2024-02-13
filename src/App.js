@@ -5,10 +5,10 @@ import "./style/styleguide.css";
 import { Layout } from "./pages/layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DashBoard } from "./pages/dashboard";
+import { Home } from "./pages/home";
 
 function App() {
-  const isAuth = false;
-  return <>{!isAuth ? <Layout /> : <DashBoard />}</>;
+  return <Home />;
 }
 
 export default App;

@@ -28,8 +28,11 @@ const SelectBar = () => {
 const SelectOption = styled.select`
   width: 100%;
   padding: 5px;
-  border: 1px solid #d9d9d9;
+  background-color: #303030;
+  border: 1px solid #303030;
   border-radius: 5px;
+  color: white;
+  margin-left: 10px;
 `;
 
 export default SelectBar;
