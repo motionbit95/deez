@@ -1,17 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import "../style/account.css";
 import { Button, IconButton, Input } from "nabit-ui-test";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import {
   FacebookAuthProvider,
   GoogleAuthProvider,
   getAuth,
-  getRedirectResult,
   signInWithEmailAndPassword,
   signInWithPopup,
-  signInWithRedirect,
 } from "firebase/auth";
 
 export const SignIn = () => {
@@ -37,6 +35,7 @@ export const SignIn = () => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
+        console.log(token);
         // The signed-in user info.
         const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
@@ -56,6 +55,9 @@ export const SignIn = () => {
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
+        console.log(email, credential);
+
+        alert(errorCode, errorMessage);
       });
   };
 
@@ -69,6 +71,7 @@ export const SignIn = () => {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         const credential = FacebookAuthProvider.credentialFromResult(result);
         const accessToken = credential.accessToken;
+        console.log(accessToken);
 
         // IdP data available using getAdditionalUserInfo(result)
         // ...
@@ -86,8 +89,9 @@ export const SignIn = () => {
         const email = error.customData.email;
         // The AuthCredential type that was used.
         const credential = FacebookAuthProvider.credentialFromError(error);
-
+        console.log(email, credential);
         // ...
+        alert(errorCode, errorMessage);
       });
   };
 
@@ -110,13 +114,18 @@ export const SignIn = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
 
-        alert(errorMessage);
+        alert(errorCode, errorMessage);
       });
   };
 
   return (
     <>
-      <img id="logo" className="logo" src={require("../image/deez_logo.png")} />
+      <img
+        alt="logo"
+        id="logo"
+        className="logo"
+        src={require("../image/deez_logo.png")}
+      />
       <div id="label" className="label">
         Log in
       </div>
@@ -177,7 +186,7 @@ export const SignIn = () => {
       )}
       <div id="t1" className="t1">
         <div>Don't you have an account?</div>
-        <a id="link" className="link" onClick={moveSignup}>
+        <a id="link" href="#!" className="link" onClick={moveSignup}>
           Sign up
         </a>
       </div>

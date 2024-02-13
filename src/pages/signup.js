@@ -5,7 +5,6 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   FacebookAuthProvider,
-  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { Button, IconButton, Input } from "nabit-ui-test";
@@ -39,7 +38,7 @@ export const SignUp = () => {
         const errorMessage = error.message;
         // ..
 
-        alert(errorMessage);
+        alert(errorCode, errorMessage);
       });
   };
 
@@ -50,10 +49,16 @@ export const SignUp = () => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
+        console.log(token);
         // The signed-in user info.
         const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
         // ...
+
+        // 계정 생성에 성공했다면, 홈으로 돌아갑니다.
+        if (user) {
+          window.location.replace("/");
+        }
       })
       .catch((error) => {
         // Handle Errors here.
@@ -64,6 +69,8 @@ export const SignUp = () => {
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
+
+        alert(errorCode, errorMessage, email, credential);
       });
   };
 
@@ -77,9 +84,15 @@ export const SignUp = () => {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         const credential = FacebookAuthProvider.credentialFromResult(result);
         const accessToken = credential.accessToken;
+        console.log(accessToken);
 
         // IdP data available using getAdditionalUserInfo(result)
         // ...
+
+        // 계정 생성에 성공했다면, 홈으로 돌아갑니다.
+        if (user) {
+          window.location.replace("/");
+        }
       })
       .catch((error) => {
         // Handle Errors here.
@@ -90,13 +103,21 @@ export const SignUp = () => {
         // The AuthCredential type that was used.
         const credential = FacebookAuthProvider.credentialFromError(error);
 
+        console.log(email, credential);
+
         // ...
+        alert(errorCode, errorMessage);
       });
   };
 
   return (
     <>
-      <img id="logo" className="logo" src={require("../image/deez_logo.png")} />
+      <img
+        alt="logo"
+        id="logo"
+        className="logo"
+        src={require("../image/deez_logo.png")}
+      />
       <div id="label" className="label">
         Create an account
       </div>
@@ -150,7 +171,7 @@ export const SignUp = () => {
       </div>
       <div id="t1" className="t1">
         <div>Already have an account?</div>
-        <a id="link" className="link" onClick={moveSignin}>
+        <a id="link" href="#!" className="link" onClick={moveSignin}>
           Log in
         </a>
       </div>

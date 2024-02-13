@@ -67,6 +67,7 @@ const addtags = () => {
             <hr />
             <div className="tap-row">
               <img
+                alt="google"
                 className="image-preview"
                 src={require("../../image/google.png")}
               />
