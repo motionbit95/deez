@@ -1,10 +1,13 @@
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
+import { storage } from "../firebase/firebase_conf";
 
 const FileUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const imageRef = useRef();
   const imageDisplay = useRef();
+  const [imageUrl, setImageUrl] = useState("");
 
   const handleFileChange = (event) => {
     // 선택된 파일을 상태에 업데이트
@@ -30,16 +33,28 @@ const FileUpload = () => {
     }
   }
 
+  const uploadFile = async (e) => {
+    const uploaded_file = await uploadBytes(
+      ref(storage, `images/${e.target.files[0].name}`),
+      e.target.files[0]
+    );
+
+    const file_url = await getDownloadURL(uploaded_file.ref);
+    setImageUrl(file_url);
+    console.log(file_url);
+    return file_url;
+  };
+
   return (
     <div>
       <Clickinput onClick={onImageUpload}>
-        <img id="imageDisplay" src={require("../image/mail.png")} />
+        <img id="imageDisplay" src={imageUrl} />
       </Clickinput>
       <Fileinput
         ref={imageRef}
         type="file"
         accept=".svg, .png"
-        onChange={handleFileChange}
+        onChange={uploadFile}
         multiple="multiple"
       />
     </div>

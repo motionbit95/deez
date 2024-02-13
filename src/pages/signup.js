@@ -88,9 +88,7 @@ export const SignUp = () => {
 
   return (
     <>
-      <div id="logo" className="logo">
-        DEEZ
-      </div>
+      <img id="logo" className="logo" src={require("../image/deez_logo.png")} />
       <div id="label" className="label">
         Create an account
       </div>

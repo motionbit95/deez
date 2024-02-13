@@ -27,7 +27,7 @@ function BHeader(props) {
   return (
     <Header hasShadow={hasShadow}>
       <HStack>
-        <Logo>DEEZ</Logo>
+        <Logo src={require("../image/deez_logo.png")}></Logo>
         <div>Profile</div>
       </HStack>
     </Header>

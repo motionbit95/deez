@@ -10,9 +10,11 @@ export const SignIn = () => {
 
   return (
     <>
-      <div id="logo" className="logo">
-        DEEZ
-      </div>
+      <div
+        id="logo"
+        className="logo"
+        src={require("../image/deez_logo.png")}
+      ></div>
       <div id="label" className="label">
         Log in
       </div>
