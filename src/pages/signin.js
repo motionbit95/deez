@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import {
   FacebookAuthProvider,
   GoogleAuthProvider,
-  getAuth,
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
+import { auth } from "../firebase/firebase_conf";
 
 export const SignIn = () => {
   const navigate = useNavigate();
@@ -24,13 +24,10 @@ export const SignIn = () => {
     // 회원가입 페이지로 이동
     navigate("/signup");
   }
-  const provider_google = new GoogleAuthProvider();
-  const provider_facebook = new FacebookAuthProvider();
 
   const googleSignIn = (e) => {
     e.preventDefault();
-    const auth = getAuth();
-    signInWithPopup(auth, provider_google)
+    signInWithPopup(auth, new GoogleAuthProvider())
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -57,13 +54,12 @@ export const SignIn = () => {
         // ...
         console.log(email, credential);
 
-        alert(errorCode, errorMessage);
+        // alert(errorCode, errorMessage);
       });
   };
 
   const facebookSignIn = (e) => {
-    const auth = getAuth();
-    signInWithPopup(auth, provider_facebook)
+    signInWithPopup(auth, new FacebookAuthProvider())
       .then((result) => {
         // The signed-in user info.
         const user = result.user;
@@ -91,7 +87,7 @@ export const SignIn = () => {
         const credential = FacebookAuthProvider.credentialFromError(error);
         console.log(email, credential);
         // ...
-        alert(errorCode, errorMessage);
+        // alert(errorCode, errorMessage);
       });
   };
 
@@ -99,7 +95,6 @@ export const SignIn = () => {
     e.preventDefault();
     console.log(e.target[0].value, e.target[1].value);
 
-    const auth = getAuth();
     signInWithEmailAndPassword(auth, e.target[0].value, e.target[1].value)
       .then((userCredential) => {
         // Signed in
@@ -114,7 +109,7 @@ export const SignIn = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
 
-        alert(errorCode, errorMessage);
+        // alert(errorCode, errorMessage);
       });
   };
 
@@ -167,13 +162,13 @@ export const SignIn = () => {
               type={"email"}
               placeholder={"Please enter your email."}
               label={"Email"}
-              isRequired
+              isRequired={true}
             />
             <Input
               type={"password"}
               placeholder={"Please enter your password."}
               label={"Password"}
-              isRequired
+              isRequired={true}
             />
             <Button
               type={"submit"}
@@ -186,7 +181,7 @@ export const SignIn = () => {
       )}
       <div id="t1" className="t1">
         <div>Don't you have an account?</div>
-        <a id="link" href="#!" className="link" onClick={moveSignup}>
+        <a id="link" className="link" onClick={moveSignup}>
           Sign up
         </a>
       </div>

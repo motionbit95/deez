@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "../style/account.css";
 import {
-  getAuth,
   GoogleAuthProvider,
   signInWithPopup,
   FacebookAuthProvider,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { Button, IconButton, Input } from "nabit-ui-test";
+import { auth } from "../firebase/firebase_conf";
 
 export const SignUp = () => {
   const navigate = useNavigate();
@@ -21,7 +21,6 @@ export const SignUp = () => {
 
     console.log(e.target[0].value, e.target[1].value, e.target[2].value);
 
-    const auth = getAuth();
     createUserWithEmailAndPassword(auth, e.target[1].value, e.target[2].value)
       .then((userCredential) => {
         // Signed in
@@ -38,12 +37,11 @@ export const SignUp = () => {
         const errorMessage = error.message;
         // ..
 
-        alert(errorCode, errorMessage);
+        // alert(errorCode, errorMessage);
       });
   };
 
   const googleSingup = (e) => {
-    const auth = getAuth();
     signInWithPopup(auth, new GoogleAuthProvider())
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -70,12 +68,11 @@ export const SignUp = () => {
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
 
-        alert(errorCode, errorMessage, email, credential);
+        // alert(errorCode, errorMessage, email, credential);
       });
   };
 
   const facebookSingup = (e) => {
-    const auth = getAuth();
     signInWithPopup(auth, new FacebookAuthProvider())
       .then((result) => {
         // The signed-in user info.
@@ -106,7 +103,7 @@ export const SignUp = () => {
         console.log(email, credential);
 
         // ...
-        alert(errorCode, errorMessage);
+        // alert(errorCode, errorMessage);
       });
   };
 
@@ -135,21 +132,24 @@ export const SignUp = () => {
         <div className="emailloginbox">
           <Input
             type="text"
+            onChange={() => {}}
             placeholder="Please enter your name"
             label={"Name"}
-            isRequired
+            isRequired={true}
           />
           <Input
             type="email"
             placeholder="Please enter your email"
             label={"Email"}
-            isRequired
+            isRequired={true}
+            onChange={() => {}}
           />
           <Input
             type="password"
             placeholder="Please enter your password"
             label={"Password"}
-            isRequired
+            isRequired={true}
+            onChange={() => {}}
           />
           {/* <input type="text" placeholder="Name" className="einput" />
           <input type="email" placeholder="Email" className="einput" />
@@ -171,7 +171,7 @@ export const SignUp = () => {
       </div>
       <div id="t1" className="t1">
         <div>Already have an account?</div>
-        <a id="link" href="#!" className="link" onClick={moveSignin}>
+        <a id="link" className="link" onClick={moveSignin}>
           Log in
         </a>
       </div>
