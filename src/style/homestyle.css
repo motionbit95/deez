@@ -6,7 +6,11 @@
     align-items: center;
     background-color: #101010;
 
-    width:100%;
+    width : 100%;
+    gap: 80px;
+    @media screen and (max-width: 720px) {
+        background-color: black;
+    }
 }
 
 .contents {
@@ -19,6 +23,9 @@
     background-color: #101010;
     width: 80%;
     gap: 80px;
+    @media screen and (max-width: 720px) {
+        background-color: black;
+    }
 }
 
 .font-white {
@@ -35,39 +42,77 @@
 
 .title-font {
     font-size: 64px;
-    font-weight: extrabold;
+    font-weight: bolder;
+
+    @media screen and (max-width: 720px) {
+        font-size: 48px;
+    }
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+
+    @media screen and (max-width: 720px) {
+        font-size: 32px;
+        
+    }
 }
 
 h2 {
     font-size: 32px;
     font-weight: regular;
+
+    @media screen and (max-width: 720px) {
+        font-size: 24px;
+        
+    }
 }
 
 h3 {
     font-size: 24px;
     font-weight: bold;
+
+    @media screen and (max-width: 720px) {
+        font-size: 16px;
+        
+    }
 }
 
 h4 {
     font-size: 24px;
     font-size: regular;
+
+    @media screen and (max-width: 720px) {
+        font-size: 16px;
+        
+    }
 }
 
 h5 {
     font-size: 16px;
     font-weight: medium;
+
+    @media screen and (max-width: 720px) {
+        font-size: 12px;
+        
+    }
 }
 
 .frame1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     background-color: #FC466B;
     
     width: 100%;
-    padding: 16px;
+    padding: 16px 0px;
     gap: 10px;
+
+    @media screen and (max-width: 720px) {
+        display: none;
+        
+    }
 }
 
 .frame2 {
@@ -78,7 +123,7 @@ h5 {
     border-radius: 50px;
     background-color: #303030;
 
-    gap: 32px;
+    gap: 100px;
     padding: 8px;
     width: 100%;
 }
@@ -106,16 +151,48 @@ h5 {
     background-color: #303030;
 
     gap: 32px;
-    padding: 8px;
+    padding: 8px 0px 8px 8px;
     width: 100%;
+    margin: 50px 0px;
+}
+
+.frame5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6633ff;
+    padding: 80px;
+
+    @media screen and (max-width: 720px) {
+        padding: 80px 40px;
+    }
+}
+
+.frame6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+    padding: 0px 30px;
 }
 
 .t-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 40px;
     margin: 30px 0px;
+}
+
+.svg-text-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    gap: 30px;
 }
 
 .a-bar {
@@ -134,15 +211,17 @@ h5 {
 
 .signin-button {
     display: flex;
+    text-align: center;
     font-size: 14px;
     background-color: #4d4d4d;
-    border: 1px solid #4d4d4d;
+    border: 1px solid hsl(0, 0%, 30%);
     border-radius: 50px;
     padding: 8px 16px;
 }
 
 .signup-button {
     display: flex;
+    text-align: center;
     font-size: 14px;
     background-color: #6633ff;
     border: 1px solid #6633ff;
@@ -156,9 +235,15 @@ h5 {
     flex-direction: row;
     justify-content: space-between;
     border: 1px solid #303030;
-
     background-color: #303030;
     border-radius: 10px;
+
+    @media screen and (max-width: 720px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 30px;
+        background-color: #101010;
+      }
 }
 
 .box-1 {
@@ -168,6 +253,16 @@ h5 {
     gap: 10px;
     width: 60%;
     padding: 30px 60px 0px 30px;
+
+    @media screen and (max-width: 720px) {
+        width: 100%;
+        padding: 40px 0px;
+    }
+}
+
+.box-1 > img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .search-box {
@@ -200,10 +295,10 @@ h5 {
     margin: 50px 0px 10px;
 }
 
-.gap80 {
+.gap30 {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 30px;
 }
 
 .button-select {
@@ -217,6 +312,13 @@ h5 {
     display: flex;
     flex-direction: row;
     gap: 30px;
+
+    margin: 30px 0px;
+
+    @media screen and (max-width: 720px) {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 .icon-boxs {
@@ -225,8 +327,8 @@ h5 {
 }
 
 .icon-box {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(5, 37px);
     background-color: #2d2d2d;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -247,4 +349,196 @@ h5 {
     border-bottom-right-radius: 5px;
     padding: 32px;
     gap: 20px;
+
+    @media screen and (max-width: 720px) {
+        text-align: flex-start;
+        
+    }
+}
+
+.ai-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+}
+
+.banner-font {
+    font-size: 16px;
+    font-weight: medium;
+}
+
+.font32bord-w {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.font24rgu-g{
+    color: #8c8c8c;
+    font-size: 24px;
+    font-weight: regular;
+}
+
+.font24light-w{
+    color: white;
+    font-size: 24px;
+    font-weight: light;
+}
+
+.font24light-p {
+    color: #865EFF;
+    font-size: 24px;
+    font-weight: light;
+}
+
+.name-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 10px;
+    padding: 10px;
+}
+
+.tag-1 {
+    color: #FC466B;
+    border: 1px solid #FC466B;
+    border-radius: 10px;
+
+    font-size: 14px;
+    padding: 5px;
+}
+
+.tag-box {
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+    padding: 5px;
+}
+
+.contribute-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #2d2d2d;
+    border: 1px solid #2d2d2d;
+    border-radius: 8px;
+
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+
+    @media screen and (max-width: 720px) {
+        grid-template-columns: repeat(1, 100%);
+        
+    }
+}
+
+.button-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 270px;
+
+    border: 1px solid #6633ff;
+    border-radius: 30px;
+    background-color: #6633ff;
+
+    color: white;
+    font-size: 24px;
+    font-weight: regular;
+}
+
+.box-row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin : 30px 0px;
+
+    @media screen and (max-width: 720px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.box-row2 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin : 30px 0px;
+
+    @media screen and (max-width: 720px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.guide-text {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.template-box {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+    padding-right: 10px;
+}
+
+.create-button {
+    border: 1px solid #9c9c9c;
+    border-radius: 5px;
+    background-color: #9c9c9c;
+
+    color: black;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    padding: 3px;
+}
+
+.font12rgu {
+    display: flex;
+    color: #d9d9d9;
+    font-size: 12px;
+    align-items: center;
+    font-weight: regular;
+}
+
+.guide-box {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.newlaunch {
+    background-color: #b08d00;
+    border: 1px solid #b08d00;
+    border-radius: 5px;
+
+    padding: 5px 10px;
+    margin: 40px;
+}
+
+.landingpage {
+    width: 50%;
+    height: 50%;
+
+    @media screen and (max-width: 720px) {
+        width: 100%;
+        height: 100%;
+    }
 }
