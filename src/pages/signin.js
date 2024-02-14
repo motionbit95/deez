@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../style/account.css";
+import "../style/styleguide.css";
 import { Button, IconButton, Input } from "nabit-ui-test";
 import { useState } from "react";
 import { motion } from "framer-motion";
