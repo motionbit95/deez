@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .home {
     display: flex;
+    font-family: var(--font-family);
     position: absolute;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +42,7 @@
     font-weight: bolder;
 
     @media screen and (max-width: 720px) {
-        font-size: 48px;
+        font-size: 38px;
     }
 }
 
@@ -79,7 +82,6 @@ h4 {
 
     @media screen and (max-width: 720px) {
         font-size: 16px;
-        
     }
 }
 
@@ -159,7 +161,7 @@ h5 {
     padding: 80px;
 
     @media screen and (max-width: 720px) {
-        padding: 80px 40px;
+        padding: 80px 30px;
     }
 }
 
@@ -332,6 +334,10 @@ h5 {
     border-top-right-radius: 5px;
     gap: 16px;
     padding: 16px;
+    @media screen and (max-width: 720px) {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
 }
 
 .use-icon {
@@ -350,7 +356,8 @@ h5 {
 
     @media screen and (max-width: 720px) {
         text-align: flex-start;
-        
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
     }
 }
 
@@ -359,6 +366,11 @@ h5 {
     flex-direction: column;
     text-align: center;
     gap: 30px;
+    padding: 40px 80px;
+
+    @media screen and (max-width: 720px) {
+        padding: 0px;
+    }
 }
 
 .banner-font {
@@ -378,15 +390,19 @@ h5 {
     font-weight: regular;
 }
 
-.font24light-w{
+.font22light-w{
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: light;
+
+    @media screen and (max-width: 720px) {
+        font-size: 16px;
+    }
 }
 
-.font24light-p {
+.font22light-p {
     color: #865EFF;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: light;
     cursor: pointer;
 }
@@ -397,7 +413,7 @@ h5 {
     align-items: center;
 
     gap: 10px;
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
 }
 
 .tag-1 {
@@ -456,6 +472,11 @@ h5 {
     font-size: 24px;
     font-weight: regular;
     cursor: pointer;
+
+    @media screen and (max-width: 720px) {
+        width: 100%;
+        
+    }
 }
 
 .box-row {
@@ -503,7 +524,7 @@ h5 {
     background-color: #9c9c9c;
 
     color: black;
-    width: 300px;
+    width: 350px;
     text-align: center;
     align-items: center;
     padding: 3px;
@@ -516,6 +537,10 @@ h5 {
     font-size: 12px;
     align-items: center;
     font-weight: regular;
+    @media screen and (max-width: 720px) {
+        font-size: 14px;
+        
+    }
 }
 
 .guide-box {
@@ -526,13 +551,19 @@ h5 {
 }
 
 .newlaunch {
-    background-color: #b08d00;
-    border: 1px solid #b08d00;
-    border-radius: 5px;
+    color : #b08d00;
+    background-color: #ffcc00;
+    border: 1px solid #ffcc00;
+    border-radius: 8px;
 
     padding: 5px 10px;
-    margin: 40px;
+    margin: 20px;
     cursor: pointer;
+
+    @media screen and (max-width: 720px) {
+        font-size: 30px;
+        margin-bottom: 80px;
+    }
 }
 
 .landingpage {
@@ -544,3 +575,4 @@ h5 {
         height: 100%;
     }
 }
+

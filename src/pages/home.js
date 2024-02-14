@@ -354,7 +354,7 @@ export const Home = () => {
                   <div className="font24rgu-g">@designDan</div>
                 </div>
               </div>
-              <div className="font24light-w">
+              <div className="font22light-w">
                 I've built pretty handy sites powered by Craft or WordPress in
                 the past, but seeing @framer tackle CMS stuff so effortlessly is
                 mind-boggling
@@ -377,7 +377,7 @@ export const Home = () => {
                   <div className="font24rgu-g">@designDan</div>
                 </div>
               </div>
-              <div className="font24light-w">
+              <div className="font22light-w">
                 I've built pretty handy sites powered by Craft or WordPress in
                 the past, but seeing @framer tackle CMS stuff so effortlessly is
                 mind-boggling
@@ -400,7 +400,7 @@ export const Home = () => {
                   <div className="font24rgu-g">@designDan</div>
                 </div>
               </div>
-              <div className="font24light-w">
+              <div className="font22light-w">
                 I've built pretty handy sites powered by Craft or WordPress in
                 the past, but seeing @framer tackle CMS stuff so effortlessly is
                 mind-boggling
@@ -423,7 +423,7 @@ export const Home = () => {
                   <div className="font24rgu-g">@designDan</div>
                 </div>
               </div>
-              <div className="font24light-w">
+              <div className="font22light-w">
                 I've built pretty handy sites powered by Craft or WordPress in
                 the past, but seeing @framer tackle CMS stuff so effortlessly is
                 mind-boggling
@@ -446,7 +446,7 @@ export const Home = () => {
                   <div className="font24rgu-g">@designDan</div>
                 </div>
               </div>
-              <div className="font24light-w">
+              <div className="font22light-w">
                 I've built pretty handy sites powered by Craft or WordPress in
                 the past, but seeing @framer tackle CMS stuff so effortlessly is
                 mind-boggling
@@ -469,7 +469,7 @@ export const Home = () => {
                   <div className="font24rgu-g">@designDan</div>
                 </div>
               </div>
-              <div className="font24light-w">
+              <div className="font22light-w">
                 I've built pretty handy sites powered by Craft or WordPress in
                 the past, but seeing @framer tackle CMS stuff so effortlessly is
                 mind-boggling
@@ -492,7 +492,7 @@ export const Home = () => {
                   <div className="font24rgu-g">@designDan</div>
                 </div>
               </div>
-              <div className="font24light-w">
+              <div className="font22light-w">
                 I've built pretty handy sites powered by Craft or WordPress in
                 the past, but seeing @framer tackle CMS stuff so effortlessly is
                 mind-boggling
@@ -515,7 +515,7 @@ export const Home = () => {
                   <div className="font24rgu-g">@designDan</div>
                 </div>
               </div>
-              <div className="font24light-w">
+              <div className="font22light-w">
                 I've built pretty handy sites powered by Craft or WordPress in
                 the past, but seeing @framer tackle CMS stuff so effortlessly is
                 mind-boggling
@@ -538,7 +538,7 @@ export const Home = () => {
                   <div className="font24rgu-g">@designDan</div>
                 </div>
               </div>
-              <div className="font24light-w">
+              <div className="font22light-w">
                 I've built pretty handy sites powered by Craft or WordPress in
                 the past, but seeing @framer tackle CMS stuff so effortlessly is
                 mind-boggling
@@ -550,12 +550,12 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <div className="button-1">내컨텐츠로 수익얻기 〉</div>
+          <div className="button-1">내 컨텐츠로 수익얻기 〉</div>
           <div className="box-row">
-            <div className="font24light-w">
+            <div className="font22light-w">
               이미 DEEZ Contribute 회원이신가요?
             </div>
-            <div className="font24light-p">로그인하기</div>
+            <div className="font22light-p">로그인하기</div>
           </div>
         </div>
         {/* New Launch */}
