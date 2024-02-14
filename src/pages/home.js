@@ -73,15 +73,13 @@ export const Home = () => {
                     the best in photography, retouching and photojournalism.
                   </h4>
                   <div className="title-font font-white">Images</div>
-                  <div>
-                    <h2 className="font-white">
-                      Capture the perfect moment in every instant.
-                    </h2>
-                    <h4 className="font-gray">
-                      Explore professional photo categories to express your
-                      ideas and discover beautiful designs.
-                    </h4>
-                  </div>
+                  <h2 className="font-white">
+                    Capture the perfect moment in every instant.
+                  </h2>
+                  <h4 className="font-gray">
+                    Explore professional photo categories to express your ideas
+                    and discover beautiful designs.
+                  </h4>
                   <div className="link-to-page font-white">바로가기 〉</div>
                 </div>
                 <div>

@@ -4,13 +4,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #101010;
+    background-color: black;
 
     width : 100%;
     gap: 80px;
-    @media screen and (max-width: 720px) {
-        background-color: black;
-    }
 }
 
 .contents {
@@ -20,12 +17,9 @@
     align-items: center;
     border: none;
 
-    background-color: #101010;
+    background-color: black;
     width: 80%;
     gap: 80px;
-    @media screen and (max-width: 720px) {
-        background-color: black;
-    }
 }
 
 .font-white {
@@ -217,6 +211,7 @@ h5 {
     border: 1px solid hsl(0, 0%, 30%);
     border-radius: 50px;
     padding: 8px 16px;
+    cursor: pointer;
 }
 
 .signup-button {
@@ -227,6 +222,7 @@ h5 {
     border: 1px solid #6633ff;
     border-radius: 50px;
     padding: 8px 16px;
+    cursor: pointer;
 }
 
 
@@ -234,15 +230,14 @@ h5 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 1px solid #303030;
-    background-color: #303030;
+    border: 1px solid #101010;
+    background-color: #101010;
     border-radius: 10px;
 
     @media screen and (max-width: 720px) {
         flex-direction: column-reverse;
         align-items: center;
         padding: 30px;
-        background-color: #101010;
       }
 }
 
@@ -250,7 +245,7 @@ h5 {
     display: flex;
     flex-direction: column;
     border: none;
-    gap: 10px;
+    gap: 30px;
     width: 60%;
     padding: 30px 60px 0px 30px;
 
@@ -288,11 +283,14 @@ h5 {
     border-radius: 100%;
     background-color: #6633ff;
     padding: 3px;
+    cursor: pointer;
 }
 
 .link-to-page {
     display: flex;
-    margin: 50px 0px 10px;
+    color: #b59dff;
+    margin: 100px 0px 10px;
+    cursor: pointer;
 }
 
 .gap30 {
@@ -390,6 +388,7 @@ h5 {
     color: #865EFF;
     font-size: 24px;
     font-weight: light;
+    cursor: pointer;
 }
 
 .name-box{
@@ -456,6 +455,7 @@ h5 {
     color: white;
     font-size: 24px;
     font-weight: regular;
+    cursor: pointer;
 }
 
 .box-row {
@@ -507,6 +507,7 @@ h5 {
     text-align: center;
     align-items: center;
     padding: 3px;
+    cursor: pointer;
 }
 
 .font12rgu {
@@ -531,6 +532,7 @@ h5 {
 
     padding: 5px 10px;
     margin: 40px;
+    cursor: pointer;
 }
 
 .landingpage {
