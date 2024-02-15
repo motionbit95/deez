@@ -1,13 +1,14 @@
 import React from "react";
 import "../style/homestyle.css";
 import SelectBar from "../component/SelectBar";
+import { motion } from "framer-motion";
 
 export const Home = () => {
   return (
     <div>
       <div id="home" className="home">
         {/* 배너 */}
-        <div id="frame1" className="frame1 banner-font font-white">
+        <div id="banner-frame" className="banner-frame banner-font font-white">
           <div>프리미엄 요금제로 더 다양하고 전문적인 디자인을 얻어보세요</div>
           <div>X</div>
         </div>
@@ -43,18 +44,27 @@ export const Home = () => {
 
           <div id="frame3" className="frame3">
             {/* Beyond Sensation */}
-            <div className="t-box">
-              <div className="title-font font-white">Beyond Sensation,</div>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "20px" }}
-              >
-                <div className="title-font font-white">Endless</div>
-                <div className="title-font font-purple">Possibilities</div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
+              <div className="t-box">
+                <div className="title-font font-white">Beyond Sensation,</div>
+                <div
+                  style={{ display: "flex", flexDirection: "row", gap: "20px" }}
+                >
+                  <div className="title-font font-white">Endless</div>
+                  <div className="title-font font-purple">Possibilities</div>
+                </div>
+                <h4 className="font-white">
+                  Digital Experience and Entertainment Zone
+                </h4>
               </div>
-              <h4 className="font-white">
-                Digital Experience and Entertainment Zone
-              </h4>
-            </div>
+            </motion.div>
             {/* Search Bar */}
             <div id="frame4" className="frame4 font-white">
               <SelectBar />
@@ -74,243 +84,287 @@ export const Home = () => {
             {/* Images */}
             <div>
               <div className="image-box">
-                <div className="box-1">
-                  <h4 className="font-gray">
-                    From studio portraits to epic Alpine landscapes, discover
-                    the best in photography, retouching and photojournalism.
-                  </h4>
-                  <div className="title-font font-white">Images</div>
-                  <h2 className="font-white">
-                    Capture the perfect moment in every instant.
-                  </h2>
-                  <h4 className="font-gray">
-                    Explore professional photo categories to express your ideas
-                    and discover beautiful designs.
-                  </h4>
-                  <div className="link-to-page font-white">바로가기 〉</div>
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    ease: "easeInOut",
+                    duration: 1,
+                    y: { duration: 2 },
+                  }}
+                >
+                  <div className="box-1">
+                    <h4 className="font-gray">
+                      From studio portraits to epic Alpine landscapes, discover
+                      the best in photography, retouching and photojournalism.
+                    </h4>
+                    <div className="title-font font-white">Images</div>
+                    <h2 className="font-white">
+                      Capture the perfect moment in every instant.
+                    </h2>
+                    <h4 className="font-gray">
+                      Explore professional photo categories to express your
+                      ideas and discover beautiful designs.
+                    </h4>
+                    <div className="link-to-page font-white">바로가기 〉</div>
+                  </div>
+                </motion.div>
                 <div>
-                  <img src={require("../image/image1.png")} />
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 1,
+                    }}
+                  >
+                    <img src={require("../image/image1.png")} />
+                  </motion.div>
                 </div>
               </div>
               <div className="button-select font-white">O O O O O</div>
             </div>
           </div>
+
           {/* Icons */}
           <div className="t-box">
-            <div className="svg-text-box">
-              <div className="title-font font-white">FREE SVG UI ICON</div>
-              <h4 className="font-white">
-                프로젝트에서 사용할 수 있는 +3,000개의 무료 벡터 아이콘을
-                제공합니다
-              </h4>
-            </div>
-            <div className="icon-container">
-              <div className="icon-boxs">
-                <div className="icon-box">
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1,
+                y: { duration: 2 },
+              }}
+            >
+              <div className="svg-text-box">
+                <div className="title-font font-white">FREE SVG UI ICON</div>
+                <h4 className="font-white">
+                  프로젝트에서 사용할 수 있는 +3,000개의 무료 벡터 아이콘을
+                  제공합니다
+                </h4>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1,
+                delay: 0.8,
+                y: { duration: 2 },
+              }}
+            >
+              <div className="icon-container">
+                <div className="icon-boxs">
+                  <div className="icon-box">
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                  </div>
+                  <div className="a-1 font-white">
+                    <h3 className="font-white">brands</h3>
+                    <h4 className="font-white">+100 icons</h4>
+                  </div>
                 </div>
-                <div className="a-1 font-white">
-                  <h3 className="font-white">brands</h3>
-                  <h4 className="font-white">+100 icons</h4>
+                <div className="icon-boxs">
+                  <div className="icon-box">
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                  </div>
+                  <div className="a-1 font-white">
+                    <h3 className="font-white">brands</h3>
+                    <h4 className="font-white">+100 icons</h4>
+                  </div>
+                </div>
+                <div className="icon-boxs">
+                  <div className="icon-box">
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                    <img
+                      className="use-icon"
+                      src={require("../image/icon1.png")}
+                    />
+                  </div>
+                  <div className="a-1 font-white">
+                    <h3 className="font-white">brands</h3>
+                    <h4 className="font-white">+100 icons</h4>
+                  </div>
                 </div>
               </div>
-              <div className="icon-boxs">
-                <div className="icon-box">
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                </div>
-                <div className="a-1 font-white">
-                  <h3 className="font-white">brands</h3>
-                  <h4 className="font-white">+100 icons</h4>
-                </div>
-              </div>
-              <div className="icon-boxs">
-                <div className="icon-box">
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                  <img
-                    className="use-icon"
-                    src={require("../image/icon1.png")}
-                  />
-                </div>
-                <div className="a-1 font-white">
-                  <h3 className="font-white">brands</h3>
-                  <h4 className="font-white">+100 icons</h4>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         {/* Generator */}
@@ -557,7 +611,12 @@ export const Home = () => {
               </div>
             </div>
           </div>
-          <div className="button-1">내 컨텐츠로 수익얻기 〉</div>
+          <motion.div
+            whileHover={{ scale: [null, 1.2, 1.1] }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="button-1">내 컨텐츠로 수익얻기 〉</div>
+          </motion.div>
           <div className="box-row">
             <div className="font22light-w">
               이미 DEEZ Contribute 회원이신가요?

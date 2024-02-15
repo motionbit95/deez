@@ -1,29 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.home {
-  display: flex;
-  font-family: var(--font-family);
-  position: absolute;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-
-  width: 100%;
-  gap: 80px;
-}
-
-.contents {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: none;
-
-  background-color: black;
-  width: 80%;
-  gap: 80px;
-}
+/* font color */
 
 .font-white {
   color: white;
@@ -36,6 +13,8 @@
 .font-purple {
   color: #6633ff;
 }
+
+/* font size */
 
 .title-font {
   font-size: 64px;
@@ -75,7 +54,7 @@ h3 {
 
 h4 {
   font-size: 24px;
-  font-size: regular;
+  font-weight: regular;
 
   @media screen and (max-width: 720px) {
     font-size: 16px;
@@ -91,7 +70,77 @@ h5 {
   }
 }
 
-.frame1 {
+.banner-font {
+    font-size: 16px;
+    font-weight: medium;
+  }
+  
+.font32bord-w {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+  
+.font24rgu-g {
+    color: #8c8c8c;
+    font-size: 24px;
+    font-weight: regular;
+  }
+  
+.font22light-w {
+    color: white;
+    font-size: 22px;
+    font-weight: light;
+  
+    @media screen and (max-width: 720px) {
+      font-size: 16px;
+    }
+}
+  
+.font22light-p {
+    color: #865eff;
+    font-size: 22px;
+    font-weight: light;
+    cursor: pointer;
+}
+
+.font12rgu {
+    color: #d9d9d9;
+    font-size: 12px;
+    font-weight: regular;
+    @media screen and (max-width: 720px) {
+      font-size: 14px;
+    }
+}
+
+  /* 페이지 구성 CSS */
+
+.home {
+    display: flex;
+    font-family: var(--font-family);
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  
+    width: 100%;
+    gap: 80px;
+  }
+  
+  .contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  
+    background-color: black;
+    width: 80%;
+    gap: 80px;
+  }
+
+.home >.banner-frame {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -114,9 +163,15 @@ h5 {
   border-radius: 50px;
   background-color: #303030;
 
-  /* gap: 100px; */
   padding: 8px;
   width: 100%;
+  min-width: 780px;
+
+  @media screen and (max-width: 720px) {
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+  }
 }
 
 .frame2 > .img {
@@ -157,7 +212,7 @@ h5 {
   justify-content: center;
   align-items: center;
   background-color: #6633ff;
-  padding: 80px;
+  padding: 80px 40px;
 
   @media screen and (max-width: 720px) {
     padding: 80px 30px;
@@ -206,28 +261,6 @@ h5 {
   @media screen and (max-width: 720px) {
     display: none;
   }
-}
-
-.signin-button {
-  display: flex;
-  text-align: center;
-  font-size: 14px;
-  background-color: #4d4d4d;
-  border: 1px solid hsl(0, 0%, 30%);
-  border-radius: 50px;
-  padding: 8px 16px;
-  cursor: pointer;
-}
-
-.signup-button {
-  display: flex;
-  text-align: center;
-  font-size: 14px;
-  background-color: #6633ff;
-  border: 1px solid #6633ff;
-  border-radius: 50px;
-  padding: 8px 16px;
-  cursor: pointer;
 }
 
 .image-box {
@@ -375,40 +408,6 @@ h5 {
   }
 }
 
-.banner-font {
-  font-size: 16px;
-  font-weight: medium;
-}
-
-.font32bord-w {
-  color: white;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.font24rgu-g {
-  color: #8c8c8c;
-  font-size: 24px;
-  font-weight: regular;
-}
-
-.font22light-w {
-  color: white;
-  font-size: 22px;
-  font-weight: light;
-
-  @media screen and (max-width: 720px) {
-    font-size: 16px;
-  }
-}
-
-.font22light-p {
-  color: #865eff;
-  font-size: 22px;
-  font-weight: light;
-  cursor: pointer;
-}
-
 .name-box {
   display: flex;
   flex-direction: row;
@@ -531,17 +530,6 @@ h5 {
   cursor: pointer;
 }
 
-.font12rgu {
-  display: flex;
-  color: #d9d9d9;
-  font-size: 12px;
-  align-items: center;
-  font-weight: regular;
-  @media screen and (max-width: 720px) {
-    font-size: 14px;
-  }
-}
-
 .guide-box {
   display: flex;
   flex-direction: column;
@@ -580,6 +568,7 @@ h5 {
 
   @media screen and (max-width: 720px) {
     display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -587,8 +576,8 @@ h5 {
 }
 
 .mobile-frame > .img {
-  width: 55px;
-  height: 18px;
+  width: 110px;
+  height: 35px;
   padding: 10px;
 }
 
@@ -598,3 +587,27 @@ h5 {
   align-items: center;
   gap: 10px;
 }
+
+/* 컴포넌트용 CSS */
+
+.signin-button {
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    background-color: #4d4d4d;
+    border: 1px solid hsl(0, 0%, 30%);
+    border-radius: 50px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .signup-button {
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    background-color: #6633ff;
+    border: 1px solid #6633ff;
+    border-radius: 50px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
