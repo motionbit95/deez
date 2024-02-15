@@ -15,6 +15,13 @@ export const Home = () => {
         {/* Hero */}
         <div id="contents" className="contents">
           {/* Toolbar */}
+          <div className="mobile-frame">
+            <img className="img" src={require("../image/deez_logo.png")}></img>
+            <div className="b-bar">
+              <div className="signin-button">Sign In</div>
+              <div className="signup-button">Sign UP</div>
+            </div>
+          </div>
 
           <div id="frame2" className="frame2 font-white">
             <img className="img" src={require("../image/deez_logo.png")}></img>
