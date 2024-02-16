@@ -71,84 +71,91 @@ h5 {
 }
 
 .banner-font {
-    font-size: 16px;
-    font-weight: medium;
-  }
-  
+  font-size: 16px;
+  font-weight: medium;
+}
+
 .font32bord-w {
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
 }
-  
+
 .font24rgu-g {
-    color: #8c8c8c;
-    font-size: 24px;
-    font-weight: regular;
-  }
-  
-.font22light-w {
-    color: white;
-    font-size: 22px;
-    font-weight: light;
-  
-    @media screen and (max-width: 720px) {
-      font-size: 16px;
-    }
+  color: #8c8c8c;
+  font-size: 24px;
+  font-weight: regular;
 }
-  
+
+.font22light-w {
+  color: white;
+  font-size: 22px;
+  font-weight: light;
+
+  @media screen and (max-width: 720px) {
+    font-size: 16px;
+  }
+}
+
 .font22light-p {
-    color: #865eff;
-    font-size: 22px;
-    font-weight: light;
-    cursor: pointer;
+  color: #865eff;
+  font-size: 22px;
+  font-weight: light;
+  cursor: pointer;
 }
 
 .font12rgu {
-    color: #d9d9d9;
-    font-size: 12px;
-    font-weight: regular;
-    @media screen and (max-width: 720px) {
-      font-size: 14px;
-    }
+  color: #d9d9d9;
+  font-size: 12px;
+  font-weight: regular;
+  @media screen and (max-width: 720px) {
+    font-size: 14px;
+  }
 }
 
-  /* 페이지 구성 CSS */
+/* 페이지 구성 CSS */
 
 .home {
-    display: flex;
-    font-family: var(--font-family);
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-  
-    width: 100%;
-    gap: 80px;
-  }
-  
-  .contents {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: none;
-  
-    background-color: black;
-    width: 80%;
-    gap: 80px;
-  }
+  display: flex;
+  font-family: var(--font-family);
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 
-.home >.banner-frame {
+  width: 100%;
+  gap: 80px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+  background-color: black;
+  width: 80%;
+  gap: 80px;
+}
+
+.home > .banner-frame {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #fc466b;
-
   width: 100%;
-  padding: 16px 0px;
-  gap: 10px;
+
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
+}
+
+.frame1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 
   @media screen and (max-width: 720px) {
     display: none;
@@ -161,8 +168,7 @@ h5 {
   align-items: center;
   border: 1px solid #303030;
   border-radius: 50px;
-  background-color: #303030;
-
+  /* background-color: #303030; */
   padding: 8px;
   width: 100%;
   min-width: 780px;
@@ -241,6 +247,7 @@ h5 {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 
   gap: 30px;
 }
@@ -362,8 +369,8 @@ h5 {
 }
 
 .icon-box {
-  display: grid;
-  grid-template-columns: repeat(5, 37px);
+  /* display: grid;
+  grid-template-columns: repeat(5, 37px); */
   background-color: #2d2d2d;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -591,23 +598,23 @@ h5 {
 /* 컴포넌트용 CSS */
 
 .signin-button {
-    display: flex;
-    text-align: center;
-    font-size: 14px;
-    background-color: #4d4d4d;
-    border: 1px solid hsl(0, 0%, 30%);
-    border-radius: 50px;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-  
-  .signup-button {
-    display: flex;
-    text-align: center;
-    font-size: 14px;
-    background-color: #6633ff;
-    border: 1px solid #6633ff;
-    border-radius: 50px;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  background-color: #4d4d4d;
+  border: 1px solid hsl(0, 0%, 30%);
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.signup-button {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  background-color: #6633ff;
+  border: 1px solid #6633ff;
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+}

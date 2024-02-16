@@ -2,16 +2,27 @@ import React from "react";
 import "../style/homestyle.css";
 import SelectBar from "../component/SelectBar";
 import { motion } from "framer-motion";
+import { Banner, Card, Carousel, Header, Typography } from "nabit-ui-test";
 
 export const Home = () => {
   return (
     <div>
       <div id="home" className="home">
         {/* 배너 */}
-        <div id="banner-frame" className="banner-frame banner-font font-white">
+
+        <div className="frame1">
+          <Banner
+            style={{ flex: 1 }}
+            title={""}
+            description={
+              "프리미엄 요금제로 더 다양하고 전문적인 디자인을 얻어보세요"
+            }
+          />
+        </div>
+        {/* <div id="frame1" className="frame1 banner-font font-white">
           <div>프리미엄 요금제로 더 다양하고 전문적인 디자인을 얻어보세요</div>
           <div>X</div>
-        </div>
+        </div> */}
 
         {/* Hero */}
         <div id="contents" className="contents">
@@ -24,7 +35,11 @@ export const Home = () => {
             </div>
           </div>
 
-          <div id="frame2" className="frame2 font-white">
+          <div className="frame2">
+            <Header colorMode={"dark"} />
+          </div>
+
+          {/* <div id="frame2" className="frame2 font-white">
             <img className="img" src={require("../image/deez_logo.png")}></img>
             <div className="a-bar">
               <h5>AI</h5>
@@ -40,7 +55,7 @@ export const Home = () => {
               <div className="signin-button">Sign In</div>
               <div className="signup-button">Sign UP</div>
             </div>
-          </div>
+          </div> */}
 
           <div id="frame3" className="frame3">
             {/* Beyond Sensation */}
@@ -52,17 +67,30 @@ export const Home = () => {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              <div className="t-box">
-                <div className="title-font font-white">Beyond Sensation,</div>
+              <div className="t-box font-white">
+                <Typography
+                  weight={"bold"}
+                  style={"xxlarge-title"}
+                  content={"Beyond Sensation,"}
+                />
                 <div
                   style={{ display: "flex", flexDirection: "row", gap: "20px" }}
                 >
-                  <div className="title-font font-white">Endless</div>
-                  <div className="title-font font-purple">Possibilities</div>
+                  <Typography
+                    weight={"bold"}
+                    style={"xxlarge-title"}
+                    content={"Endless"}
+                  />
+                  <Typography
+                    weight={"bold"}
+                    style={"xxlarge-title font-purple"}
+                    content={"Possibilities"}
+                  />
                 </div>
-                <h4 className="font-white">
-                  Digital Experience and Entertainment Zone
-                </h4>
+                <Typography
+                  style={"large-title"}
+                  content={"Digital Experience and Entertainment Zone"}
+                />
               </div>
             </motion.div>
             {/* Search Bar */}
@@ -82,7 +110,7 @@ export const Home = () => {
               </div>
             </div>
             {/* Images */}
-            <div>
+            {/* <div>
               <div className="image-box">
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
@@ -124,7 +152,44 @@ export const Home = () => {
                 </div>
               </div>
               <div className="button-select font-white">O O O O O</div>
-            </div>
+            </div> */}
+            <Carousel
+              content={[
+                <Card
+                  colorMode={"dark"}
+                  content={{
+                    caption:
+                      "From studio portraits to epic Alpine landscapes, discover the best in photography, retouching and photojournalism.",
+                    title: "Images1",
+                    subtitle: "Capture the perfect moment in every instant.",
+                    description:
+                      "Explore professional photo categories to express your ideas and discover beautiful designs.",
+                  }}
+                />,
+                <Card
+                  colorMode={"dark"}
+                  content={{
+                    caption:
+                      "From studio portraits to epic Alpine landscapes, discover the best in photography, retouching and photojournalism.",
+                    title: "Images2",
+                    subtitle: "Capture the perfect moment in every instant.",
+                    description:
+                      "Explore professional photo categories to express your ideas and discover beautiful designs.",
+                  }}
+                />,
+                <Card
+                  colorMode={"dark"}
+                  content={{
+                    caption:
+                      "From studio portraits to epic Alpine landscapes, discover the best in photography, retouching and photojournalism.",
+                    title: "Images3",
+                    subtitle: "Capture the perfect moment in every instant.",
+                    description:
+                      "Explore professional photo categories to express your ideas and discover beautiful designs.",
+                  }}
+                />,
+              ]}
+            />
           </div>
 
           {/* Icons */}
@@ -158,208 +223,49 @@ export const Home = () => {
                 y: { duration: 2 },
               }}
             >
+              <div className="svg-text-box">
+                <Typography
+                  weight={"bold"}
+                  align={"center"}
+                  style={"xxlarge-title font-white"}
+                  content={"FREE SVG UI ICON"}
+                />
+                <Typography
+                  align={"center"}
+                  style={"title2 font-white"}
+                  content={
+                    "프로젝트에서 사용할 수 있는 +3,000개의 무료 벡터 아이콘을 제공합니다"
+                  }
+                />
+              </div>
               <div className="icon-container">
                 <div className="icon-boxs">
                   <div className="icon-box">
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
+                    <img src={require("../image/brands.png")} />
                   </div>
                   <div className="a-1 font-white">
-                    <h3 className="font-white">brands</h3>
+                    <h3 className="font-white">Brands</h3>
                     <h4 className="font-white">+100 icons</h4>
                   </div>
                 </div>
                 <div className="icon-boxs">
                   <div className="icon-box">
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
+                    <img src={require("../image/arrows.png")} />
                   </div>
-                  <div className="a-1 font-white">
-                    <h3 className="font-white">brands</h3>
+                  <div
+                    className="a-1 font-white"
+                    style={{ backgroundColor: "#9876FF" }}
+                  >
+                    <h3 className="font-white">Arrows</h3>
                     <h4 className="font-white">+100 icons</h4>
                   </div>
                 </div>
                 <div className="icon-boxs">
                   <div className="icon-box">
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
-                    <img
-                      className="use-icon"
-                      src={require("../image/icon1.png")}
-                    />
+                    <img src={require("../image/emojis.png")} />
                   </div>
                   <div className="a-1 font-white">
-                    <h3 className="font-white">brands</h3>
+                    <h3 className="font-white">Emojis</h3>
                     <h4 className="font-white">+100 icons</h4>
                   </div>
                 </div>
